@@ -1,0 +1,13 @@
+// FONTS LOAD SECTION
+@mixin font($fname, $fstyle, $fweight, $furl){
+    @font-face{
+        font-family: $fname;
+        font-style: $fstyle;
+        font-weight: $fweight;
+        font-display: swap;
+        src: local($fname), url($furl) format('woff2');
+    }
+}
+
+@include font('Oswald', normal, 300, '../fonts/Oswald/Oswald-Light.ttf');
+@include font('Calibri', normal, 400, '../fonts/Maven_Pro/MavenProRegular.woff2');

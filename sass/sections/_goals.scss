@@ -1,0 +1,83 @@
+.goals {
+
+}
+
+.goals__wrap {
+
+}
+
+.goals__header {
+
+}
+
+.goals__title {
+    font-size: 36px;
+}
+
+.goals__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 83px 0 0 0;
+}
+
+.goals__img {
+    width: 411px;
+}
+
+.goals__list {
+
+}
+
+.goals__item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 180px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(1) {
+        transform: translate(calc(-50% - 265px), calc(-50% + 80px));
+    }
+
+    &:nth-child(2) {
+        transform: translate(calc(-50% - 305px), calc(-50% + -110px));
+    }
+
+    &:nth-child(3) {
+        transform: translate(calc(-50% - 160px), calc(-50% + -195px));
+    }
+
+    &:nth-child(4) {
+        transform: translate(calc(-50% + 125px), calc(-50% + -195px));
+    }
+
+    &:nth-child(5) {
+        transform: translate(calc(-50% + 305px), calc(-50% + -110px));
+    }
+
+    &:nth-child(6) {
+        transform: translate(calc(-50% + 265px), calc(-50% + 80px));
+    }
+}
+
+.goals__item-img {
+    width: 99px;
+}
+
+.goals__item-text {
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+.goals__text {
+    width: fit-content;
+    font-size: 17px;
+    font-weight: 700;
+    color: $second;
+    margin: 48px auto 0 auto;
+}

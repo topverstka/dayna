@@ -1,0 +1,115 @@
+// Шапка
+.header {
+    padding: 26px 0 0 0;
+}
+
+.header__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__email {
+    display: flex;
+    align-items: center;
+}
+
+.header__email-icon {
+    width: 24px;
+    height: 17px;
+}
+
+.header__email-text {
+    font-size: 18px;
+    margin: 0 0 0 6px;
+}
+
+.header__descr {
+    font-size: 18px;
+    margin: 4px 0 0 0;
+}
+
+.header__sesction-line {
+    max-width: 428px;
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
+// Главный экран
+.main {
+    position: relative;
+    width: 100%;
+    height: 570px;
+    background: url(../img/main/bg-image.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+    & .container {
+        height: 100%;
+    }
+}
+
+.main__body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 90px 0 0 0;
+    z-index: 1;
+}
+
+.main__title {
+    
+}
+
+.main__descr {
+    font-size: 26px;
+    text-align: center;
+    margin: 12px 0 0 0;
+}
+
+.main__btn {
+    margin: 33px 0 0 0;
+}
+
+.main__label {
+    font-size: 20px;
+    text-align: center;
+    margin: 26px 0 0 0;
+}
+
+// Декорации на главном экране
+.main__dec {
+    pointer-events: none;
+}
+
+.main__dec-flower-left {
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    width: 566px;
+    height: 415px;
+    transform: translate(calc(-50% - 330px), 0);
+}
+
+.main__dec-flower-right {
+    position: absolute;
+    top: -250px;
+    right: 50%;
+    width: 735px;
+    height: 480px;
+    transform: translate(calc(50% + 590px), 0);
+}
+
+.main__dec-dayna {
+    position: absolute;
+    bottom: -90px;
+    right: 50%;
+    width: 750px;
+    height: 588px;
+    transform: translate(calc(50% + 370px), 0);
+}

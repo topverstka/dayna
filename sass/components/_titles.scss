@@ -1,0 +1,23 @@
+h1,
+h2,
+h3,
+h4 {
+    color: $second;
+    text-align: center;
+}
+
+h1 {
+    font-family: $ffHeader;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
