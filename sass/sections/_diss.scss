@@ -1,0 +1,46 @@
+.diss {
+
+}
+
+.diss__wrap {
+
+}
+
+.diss__header {
+
+}
+
+.diss__title {
+    max-width: 830px;
+    width: 100%;
+    font-size: 24px;
+    margin: 0 auto;
+}
+
+.diss__body {
+    margin: 40px 0 0 0;
+}
+
+.diss__item-list {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.diss__item {
+    display: flex;
+    margin: 12px 0;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        min-width: 20px;
+        width: 20px;
+        height: 20px;
+        transform: translate(0, 2px);
+        background: url(../img/icons/tick.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0 17px 0 0;
+    }
+}

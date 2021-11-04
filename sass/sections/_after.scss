@@ -1,0 +1,98 @@
+.after {
+    position: relative;
+}
+
+.after__wrap {
+
+}
+
+// Шапка
+.after__header {
+
+}
+
+.after__title {
+    max-width: 850px;
+    width: 100%;
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+// Тело
+.after__body {
+    margin: 60px 0 0 0;
+}
+
+// Карточки
+.after__item-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px 85px;
+}
+
+.after__item {
+    max-width: 280px;
+    width: 100%;
+}
+
+.after__item-img {
+    max-width: 246px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.after__item-title {
+    font-size: 20px;
+    color: $main;
+    text-align: center;
+    margin: 26px 0 0 0;
+}
+
+// Контентная часть
+.after__text {
+    max-width: 720px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    margin: 54px auto 0 auto;
+}
+
+// Пожалуйста
+.after__please {
+    display: flex;
+    flex-direction: column;
+    margin: 45px 0 0 0;
+}
+
+.after__please-title {
+    font-size: 36px;
+    font-family: $ffSerif;
+    font-style: italic;
+    color: $main;
+}
+
+.after__please-text {
+    max-width: 826px;
+    width: 100%;
+    font-size: 24px;
+    font-family: $ffSerif;
+    font-style: italic;
+    text-align: center;
+    margin: 28px auto 0;
+}
+
+.after__please-btn {
+    max-width: 250px;
+    width: 100%;
+    margin: 37px auto 0;
+}
+
+.after__line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    max-width: 1000px;
+    transform: translate(-50%, 0);
+}

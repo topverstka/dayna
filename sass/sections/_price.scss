@@ -1,0 +1,153 @@
+.price {
+    background: url(../img/price/bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.price__wrap {
+
+}
+
+// Модификаторы
+.price-item_padding {
+    padding: 0 22px;
+}
+
+.price__header {
+    max-width: 910px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.price__header-label {
+    font-size: 30px;
+    color: $second;
+
+    & strong {
+        font-weight: 700;
+    }
+}
+
+.price__header-text {
+    font-size: 24px;
+    margin: 32px 0 0 0;
+}
+
+.price__header-title {
+    font-size: 36px;
+    margin: 42px 0 0 0;
+
+    & strong {
+        font-weight: 700;
+    }
+}
+
+.price__body {
+    margin: 54px 0 0 0;
+}
+
+.price-item__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+}
+
+// Карточки с условиями и ценами
+.price-item {
+    background: #fff;
+}
+
+.price-item__wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// Шапка карточки
+.price-item__header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    padding-top: 32px;
+    padding-bottom: 16px;
+}
+
+.price-item__title {
+    font-size: 30px;
+}
+
+.price-item__line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    max-width: 280px;
+    width: 100%;
+    transform: translate(-50%, 0);
+}
+
+// Контент карточки
+.price-item__body {
+    flex: 1 1 auto;
+    font-size: 22px;
+    margin: 26px 0 60px 0;
+}
+
+.price-item__subtitle {
+    font-weight: 700;
+    text-align: left;
+    margin: 12px 0;
+}
+
+.price-item__ol {
+    margin: 12px 0;
+}
+
+.price-item__li {
+    margin: 12px 0;
+}
+
+.price-item__text {
+    margin: 12px 0;
+}
+
+.price-item__attention {
+    font-weight: 700;
+    color: $accent;
+    margin: 12px 0;
+}
+
+// Подвал
+.price-item__footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 12px 48px 12px;
+    margin: auto 0 0 0;
+}
+
+.price-item__old-price {
+    font-size: 22px;
+    text-decoration: line-through;
+}
+
+.price-item__current-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: $accent;
+    margin: 16px 0 0 0;
+}
+
+.price-item__footer-btn {
+    width: 250px;
+    padding: 20px 12px;
+    margin: 30px 0 0 0;
+}

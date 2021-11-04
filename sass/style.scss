@@ -3,6 +3,7 @@
 // USER VARIABLES SECTION
 $ffMain: 'Calibri', sans-serif;
 $ffHeader: 'Oswald', sans-serif;
+$ffSerif: serif;
 
 $minHover: 768; // если хочешь убрать hover на телефонах, укажи - 768px
 $tr: .4s; // плавность
@@ -23,6 +24,7 @@ $mobile-s: 320;
     --accent-hover: #ff917e;
     --outline: #C0C0C0;
     --bg-page: #FEF1EB;
+    --bg-section: #E0CCC7; 
 }
 
 $main: var(--main);
@@ -31,6 +33,7 @@ $accent: var(--accent);
 $accent-hover: var(--accent-hover);
 $outline: var(--outline);
 $bg-page: var(--bg-page);
+$bg-section: var(--bg-section);
 
 
 @import '_reset';
@@ -62,6 +65,10 @@ body {
     position: relative;
 }
 
+.text-accent {
+    color: $accent;
+}
+
 @import '_grid';
 
 // Компоненты
@@ -78,3 +85,10 @@ body {
 @import 'sections/_parameters';
 @import 'sections/_about';
 @import 'sections/_goals';
+@import 'sections/_price';
+@import 'sections/_attention';
+@import 'sections/_after';
+@import 'sections/_diss';
+@import 'sections/_faq';
+@import 'sections/_result';
+@import 'sections/_footer';

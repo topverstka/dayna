@@ -1,0 +1,63 @@
+.attention {
+    
+}
+
+.attention__wrap {
+
+}
+
+.attention__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.attention__header-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.attention__header-text {
+    max-width: 450px;
+    width: 100%;
+    font-size: 24px;
+    margin: 50px 0 0 0;
+
+    & strong {
+        font-size: 26px;
+    }
+}
+
+.attention__body {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto 0 auto;
+}
+
+.attention__content {
+    max-width: 354px;
+    width: 100%;
+    font-weight: 24;
+}
+
+.attention__text {
+    font-size: 24px;
+}
+
+.attention__img {
+    min-width: 300px;
+    width: 300px;
+    margin: 0 0 0 24px;
+}
+
+.attention__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

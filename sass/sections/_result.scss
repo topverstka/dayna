@@ -1,0 +1,49 @@
+.result {
+
+}
+
+.result__wrap {
+
+}
+
+.result__header {
+
+}
+
+.result__title {
+    max-width: 600px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+.result__body {
+    position: relative;
+}
+
+.result__btn {
+    max-width: 250px;
+    width: 100%;
+    margin-top: 45px;
+}
+
+.result__dec {
+
+}
+
+.result__flower {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.result__flower-left {
+    width: 190px;
+    transform: translate(calc(-50% + -260px), calc(-50% + 50px));
+}
+
+.result__flower-right {
+    width: 223px;
+    transform: translate(calc(-50% + 270px), calc(-50% + 50px));
+}
