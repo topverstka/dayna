@@ -44,7 +44,7 @@
 }
 
 :focus-visible {
-  outline: -webkit-focus-ring-color auto 1px;
+  outline: none;
 }
 
 nav,
@@ -287,6 +287,41 @@ input:focus:required:invalid, textarea:focus:required:invalid, button:focus:requ
 
 input:required:valid, textarea:required:valid, button:required:valid {
   border-color: green;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+}
+
+.input input {
+  width: 100%;
+  height: 54px;
+  background: #fff;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.input input:focus + label, .input input:valid + label {
+  top: 0;
+}
+
+.input label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20px;
+  text-align: center;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .swiper {
@@ -875,6 +910,63 @@ h2 {
 
 .parameters__item-descr {
   font-size: 16px;
+}
+
+.video {
+  background: var(--bg-section);
+}
+
+.video__title {
+  font-size: 36px;
+}
+
+.video__body {
+  margin: 35px 0 0 0;
+}
+
+.video__block {
+  position: relative;
+  max-width: 680px;
+  width: 100%;
+  height: 380px;
+  background: url(../img/video/bg.png) no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-position: center;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.video__flower {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.video__flower-left-1 {
+  width: 140px;
+  top: 0;
+  -webkit-transform: translate(-webkit-calc(-50% - 280px), 0);
+      -ms-transform: translate(calc(-50% - 280px), 0);
+          transform: translate(calc(-50% - 280px), 0);
+}
+
+.video__input-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 24px;
+     -moz-column-gap: 24px;
+          column-gap: 24px;
+  margin: 30px 0 0 0;
+}
+
+.video__btn {
+  margin: 30px auto 0;
+  padding: 20px 30px;
 }
 
 .about__header {
