@@ -1,0 +1,119 @@
+.reviews {
+
+}
+
+.reviews__wrap {
+
+}
+
+.reviews__body {
+
+}
+
+.reviews__item-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews__item {
+    position: relative;
+    width: 440px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews__item-small {
+    height: 330px;
+
+    &.reviews__item_first {
+        
+        & .reviews__item-text {
+            padding: 45px 40px 45px 50px;
+        }
+
+        & .reviews__item-img-flower {
+            bottom: -40px;
+            left: -240px;
+        }
+    }
+
+    &.reviews__item_second {
+        
+        & .reviews__item-text {
+            padding: 45px 42px 45px 75px;
+        }
+
+        & .reviews__item-img-flower {
+            bottom: -40px;
+            left: 310px;
+        }
+    }
+}
+
+.reviews__item-text {
+
+    &::before {
+        content: '';
+        display: inline-block;
+        min-width: 15px;
+        width: 15px;
+        height: 12px;
+        background: url(../img/icons/quote-start.png) no-repeat;
+        margin: 0 6px 0 -21px;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        min-width: 15px;
+        width: 15px;
+        height: 12px;
+        background: url(../img/icons/quote-start.png) no-repeat;
+        margin: 0 0 0 6px;
+    }
+}
+
+.reviews__item_first {
+    
+    & .reviews__item-text {
+        padding: 45px 21px 45px 40px;
+    }
+
+    & .reviews__item-img-flower {
+        width: 373px;
+        bottom: -50px;
+        left: -230px;
+    }
+}
+
+.reviews__item_second {
+    margin: 0 0 0 50px;
+    
+    & .reviews__item-text {
+        padding: 45px 22px 45px 55px;
+    }
+
+    & .reviews__item-img-flower {
+        width: 382px;
+        bottom: -50px;
+        left: 300px;
+    }
+}
+
+.reviews__item-img-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.reviews__item-img-flower {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

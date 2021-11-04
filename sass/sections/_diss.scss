@@ -1,5 +1,14 @@
 .diss {
+    position: relative;
+}
 
+.diss__line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    max-width: 1000px;
+    width: 100%;
+    transform: translate(-50%, 0);
 }
 
 .diss__wrap {
