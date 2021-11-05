@@ -1,5 +1,12 @@
 .result {
 
+    @media (max-width: $laptop) {
+        padding-bottom: 90px;
+    }
+
+    @media (max-width: $tablet) {
+        padding-bottom: 60px;
+    }
 }
 
 .result__wrap {

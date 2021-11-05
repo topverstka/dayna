@@ -5,6 +5,7 @@
 	<title>Project name</title>
 	<meta name="viewport" content="width=device-width">
 	<meta name="description" content="Описание проекта">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="icon" href="./img/favicon.ico">
 	<link rel="stylesheet" href="./css/aos.css">
 
@@ -40,7 +41,10 @@
 			</div>
 			<div class="main__dec">
 				<div class="main__dec-flower-left"><img src="./img/main/flower-left.png" alt="Цветок"></div>
-				<div class="main__dec-flower-right"><img src="./img/main/flower-right.png" alt="Цветок"></div>
+				<div class="main__dec-flower-right">
+					<img src="./img/main/flower-right-1.png" alt="Цветок">
+					<img src="./img/main/flower-right-2.png" alt="Цветок">
+				</div>
 				<div class="main__dec-dayna"><img src="./img/main/dayna-main.png" alt="Дайна"></div>
 			</div>
 		</main>
@@ -55,27 +59,27 @@
 						</div>
 						<div class="situation__item">
 							<div class="situation__item-img"><img src="./img/situations/2.png" alt=""></div>
-							<p class="situation__item-text">Ты не помнишь уже, когда последний раз отдыхала</p>
+							<p class="situation__item-text">Ты запретила себе быть сексуальной и женственной</p>
 						</div>
 						<div class="situation__item">
 							<div class="situation__item-img"><img src="./img/situations/3.png" alt=""></div>
-							<p class="situation__item-text">Ты не помнишь уже, когда последний раз отдыхала</p>
+							<p class="situation__item-text">Тебя не устраивают отношения со своим (?) мужчиной</p>
 						</div>
 						<div class="situation__item">
 							<div class="situation__item-img"><img src="./img/situations/4.png" alt=""></div>
-							<p class="situation__item-text">Ты не помнишь уже, когда последний раз отдыхала</p>
+							<p class="situation__item-text">Ты устала от попыток «достучаться» до своих детей</p>
 						</div>
 						<div class="situation__item">
 							<div class="situation__item-img"><img src="./img/situations/5.png" alt=""></div>
-							<p class="situation__item-text">Ты не помнишь уже, когда последний раз отдыхала</p>
+							<p class="situation__item-text">В семье вы не слышите друг друга, зато полно контроля</p>
 						</div>
 						<div class="situation__item">
 							<div class="situation__item-img"><img src="./img/situations/6.png" alt=""></div>
-							<p class="situation__item-text">Ты не помнишь уже, когда последний раз отдыхала</p>
+							<p class="situation__item-text">Тебе не хватает романтики и... даже простого понимания</p>
 						</div>
 						<div class="situation__item">
 							<div class="situation__item-img"><img src="./img/situations/7.png" alt=""></div>
-							<p class="situation__item-text">Ты не помнишь уже, когда последний раз отдыхала</p>
+							<p class="situation__item-text">Ты крепко вжилась в чужую роль «женщина-мужик»</p>
 						</div>
 					</div>
 					<div class="situation__text-list">
@@ -197,7 +201,7 @@
 					</div>
 					<div class="video__body">
 						<div class="video__block">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/qS0lX6kJuiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/iFtCLjT8e_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<!-- <div class="video__content">
 								<p class="video__text">Видео-приглашение<br>на бесплатный вебинар</p>
 								<span class="video__label">от Дайны Ейнберга</span>
@@ -212,7 +216,7 @@
 								<div class="video__dayna"><img src="./img/video/dayna.png" alt=""></div>
 							</div> -->
 						</div>
-						<form action="#" class="video__form">
+						<form action="#" method="POST" class="video__form">
 							<div class="video__input-list">
 								<div class="input">
 									<input id="user-name" type="text" name="name" placeholder="Введите ваше Имя Фамилию" required>
@@ -343,93 +347,123 @@
 					<div class="price__header">
 						<p class="price__header-label"><strong>"Сколько же это стоит?"</strong> - наверняка задаёшь Ты себе вопрос.</p>
 						<p class="price__header-text">Я отлично понимаю, что у кого-то есть больше денег, а у кого-то меньше, у кого-то полно времени, а у кого-то явная нехватка, кто-то прошёл уже какое-то количество курсов, а кто-то только начинает.</p>
-						<h2 class="price__header-title">Именно поэтому я разработала три Тарифа, которые <br><strong>удовлетворят любые ваши потребности:</strong></h2>
+						<h2 class="price__header-title">Именно поэтому я разработала три Тарифа, которые <strong>удовлетворят любые ваши потребности:</strong></h2>
 					</div>
 					<div class="price__body">
 						<div class="price-item__list">
 							<div class="price-item">
-								<div class="price-item__wrap">
-									<div class="price-item__header price-item_padding">
-										<h3 class="price-item__title">Меняюсь самостоятельно</h3>
-										<div class="section-line price-item__line"></div>
+								<div class="acc price-item__wrap _show">
+									<div class="acc__header price-item__acc-header">
+										<div class="price-item__header price-item_padding">
+											<h3 class="price-item__title">Меняюсь самостоятельно</h3>
+											<div class="section-line price-item__line"></div>
+										</div>
 									</div>
-									<div class="price-item__body price-item_padding">
-										<h4 class="price-item__subtitle">8 обучающих модулей, 24 урока:</h4>
-										<ol class="price-item__ol">
-											<li class="price-item__li">Женское начало</li>
-											<li class="price-item__li">Энергия притягательности</li>
-											<li class="price-item__li">Эмоциональность в «+»</li>
-											<li class="price-item__li">Любовь в отношениях</li>
-											<li class="price-item__li">Счастье в детях</li>
-											<li class="price-item__li">Реализация себя</li>
-											<li class="price-item__li">Женская мудрость</li>
-											<li class="price-item__li">Вера в себя</li>
-											<li class="price-item__li">Любовь в отношениях</li>
-										</ol>
-										<h4 class="price-item__subtitle">24 домашних заданий</h4>
-										<h4 class="price-item__subtitle">Доступ на 3 месяца</h4>
-										<h4 class="price-item__subtitle">Самостоятельное прохождение</h4>
-										<p class="price-item__text">Нет общего чата, нет куратора, нет наставника, нет прямых эфиров</p>
+									<div class="acc__body price-item__acc-body">
+										<div class="price-item__body price-item_padding">
+											<h4 class="price-item__subtitle">8 обучающих модулей, 24 урока:</h4>
+											<ol class="price-item__ol">
+												<li class="price-item__li">Женское начало</li>
+												<li class="price-item__li">Энергия притягательности</li>
+												<li class="price-item__li">Эмоциональность в «+»</li>
+												<li class="price-item__li">Любовь в отношениях</li>
+												<li class="price-item__li">Счастье в детях</li>
+												<li class="price-item__li">Реализация себя</li>
+												<li class="price-item__li">Женская мудрость</li>
+												<li class="price-item__li">Вера в себя</li>
+												<li class="price-item__li">Любовь в отношениях</li>
+											</ol>
+											<h4 class="price-item__subtitle">24 домашних заданий</h4>
+											<h4 class="price-item__subtitle">Доступ на 3 месяца</h4>
+											<h4 class="price-item__subtitle">Самостоятельное прохождение</h4>
+											<p class="price-item__text">Нет общего чата, нет куратора, нет наставника, нет прямых эфиров</p>
+										</div>
+										<div class="price-item__footer">
+											<div class="price-item__prices">
+												<span class="price-item__old-price">90000 рублей / 1090 евро</span>
+												<span class="price-item__current-price">67000 рублей / 812 евро</span>
+											</div>
+											<a href="#video" class="btn btn_full btn_center price-item__footer-btn">Хочу!</a>
+										</div>
 									</div>
-									<div class="price-item__footer">
-										<span class="price-item__old-price">90000 рублей / 1090 евро</span>
-										<span class="price-item__current-price">67000 рублей / 812 евро</span>
-										<a href="#video" class="btn btn_full btn_center price-item__footer-btn">Хочу!</a>
-									</div>
+									<button class="acc__btn price-item__more">
+										<span class="price-item__more-text">Узнать подробнее</span>
+										<span class="price-item__more-icon"><img src="./img/icons/arrow-more.png" alt="Подробнее"></span>
+									</button>
 								</div>
 							</div>
 							<div class="price-item">
-								<div class="price-item__wrap">
-									<div class="price-item__header price-item_padding">
-										<h3 class="price-item__title">Меняюсь вместе с девочками</h3>
-										<div class="section-line price-item__line"></div>
+								<div class="acc price-item__wrap">
+									<div class="acc__header price-item__acc-header">
+										<div class="price-item__header price-item_padding">
+											<h3 class="price-item__title">Меняюсь вместе с девочками</h3>
+											<div class="section-line price-item__line"></div>
+										</div>
 									</div>
-									<div class="price-item__body price-item_padding">
-										<h4 class="price-item__subtitle">8 обучающих модулей, 24 урока:</h4>
-										<h4 class="price-item__subtitle">24 домашних заданий</h4>
-										<h4 class="price-item__subtitle">+ Проработка 40 вопросов о раскрытии своей женственности</h4>
-										<h4 class="price-item__subtitle">+ 5 глубоких медитаций</h4>
-										<h4 class="price-item__subtitle">+ 3 эфира вопросов / ответов с возможностью задать все свои вопросы</h4>
-										<h4 class="price-item__subtitle">+ Женская игра счастья и энергии</h4>
-										<h4 class="price-item__subtitle">+ Индивидуальные подсказки из метафорических карт</h4>
-										<h4 class="price-item__subtitle">+ Проверка домашних заданий куратором</h4>
-										<h4 class="price-item__subtitle">+ Закрытый женский чат для вдохновляющего общения на 3 месяца</h4>
-										<h4 class="price-item__subtitle">+ Абонемент участия в Женском клубе «Я есть СЧАСТЬЕ» с Дайной на 3 месяца</h4>
+									<div class="acc__body price-item__acc-body">
+										<div class="price-item__body price-item_padding">
+											<h4 class="price-item__subtitle">8 обучающих модулей, 24 урока:</h4>
+											<h4 class="price-item__subtitle">24 домашних заданий</h4>
+											<h4 class="price-item__subtitle">+ Проработка 40 вопросов о раскрытии своей женственности</h4>
+											<h4 class="price-item__subtitle">+ 5 глубоких медитаций</h4>
+											<h4 class="price-item__subtitle">+ 3 эфира вопросов / ответов с возможностью задать все свои вопросы</h4>
+											<h4 class="price-item__subtitle">+ Женская игра счастья и энергии</h4>
+											<h4 class="price-item__subtitle">+ Индивидуальные подсказки из метафорических карт</h4>
+											<h4 class="price-item__subtitle">+ Проверка домашних заданий куратором</h4>
+											<h4 class="price-item__subtitle">+ Закрытый женский чат для вдохновляющего общения на 3 месяца</h4>
+											<h4 class="price-item__subtitle">+ Абонемент участия в Женском клубе «Я есть СЧАСТЬЕ» с Дайной на 3 месяца</h4>
+										</div>
+										<div class="price-item__footer">
+											<div class="price-item__prices">
+												<span class="price-item__old-price">120000 рублей / 1450 евро</span>
+												<span class="price-item__current-price">75000 рублей / 908 евро</span>
+											</div>
+											<a href="#video" class="btn btn_full btn_center price-item__footer-btn">Занимаю место!</a>
+										</div>
 									</div>
-									<div class="price-item__footer">
-										<span class="price-item__old-price">120000 рублей / 1450 евро</span>
-										<span class="price-item__current-price">75000 рублей / 908 евро</span>
-										<a href="#video" class="btn btn_full btn_center price-item__footer-btn">Занимаю место!</a>
-									</div>
+									<button class="acc__btn price-item__more">
+										<span class="price-item__more-text">Узнать подробнее</span>
+										<span class="price-item__more-icon"><img src="./img/icons/arrow-more.png" alt="Подробнее"></span>
+									</button>
 								</div>
 							</div>
 							<div class="price-item">
-								<div class="price-item__wrap">
-									<div class="price-item__header price-item_padding">
-										<h3 class="price-item__title">Меняюсь лично с Дайной</h3>
-										<div class="section-line price-item__line"></div>
+								<div class="acc price-item__wrap">
+									<div class="acc__header price-item__acc-header">
+										<div class="price-item__header price-item_padding">
+											<h3 class="price-item__title">Меняюсь лично с Дайной</h3>
+											<div class="section-line price-item__line"></div>
+										</div>
 									</div>
-									<div class="price-item__body price-item_padding">
-										<h4 class="price-item__subtitle">8 обучающих модулей, 24 урока:</h4>
-										<h4 class="price-item__subtitle">24 домашних заданий</h4>
-										<h4 class="price-item__subtitle">Проработка 40 вопросов о раскрытии своей женственности</h4>
-										<h4 class="price-item__subtitle">5 глубоких медитаций</h4>
-										<h4 class="price-item__subtitle">3 эфира вопросов / ответов с возможностью задать все свои вопросы</h4>
-										<h4 class="price-item__subtitle">Женская игра счастья и энергии</h4>
-										<h4 class="price-item__subtitle">Индивидуальные подсказки из метафорических карт</h4>
-										<h4 class="price-item__subtitle">+ Закрытый женский чат для вдохновляющего общения на 6 месяцев</h4>
-										<h4 class="price-item__subtitle">+ Абонемент участия в Женском клубе «Я есть СЧАСТЬЕ» с Дайной на 6 месяцев</h4>
-										<h4 class="price-item__subtitle">+ Проверка домашних заданий Дайной</h4>
-										<h4 class="price-item__subtitle">+ Ежедневная обратная связь от Дайны</h4>
-										<h4 class="price-item__subtitle">+ 4 встречи закрытой мини-группы с Дайной для проработки разных внутренних вопросов</h4>
-										<h4 class="price-item__subtitle">+ 2 индивидуальные онлайн-сессии коучинг-терапии с Дайной (длительность сессии — до 2 ч.)</h4>
-										<p class="price-item__attention">ВНИМАНИЕ: только 5 мест!</p>
+									<div class="acc__body price-item__acc-body">
+										<div class="price-item__body price-item_padding">
+											<h4 class="price-item__subtitle">8 обучающих модулей, 24 урока:</h4>
+											<h4 class="price-item__subtitle">24 домашних заданий</h4>
+											<h4 class="price-item__subtitle">Проработка 40 вопросов о раскрытии своей женственности</h4>
+											<h4 class="price-item__subtitle">5 глубоких медитаций</h4>
+											<h4 class="price-item__subtitle">3 эфира вопросов / ответов с возможностью задать все свои вопросы</h4>
+											<h4 class="price-item__subtitle">Женская игра счастья и энергии</h4>
+											<h4 class="price-item__subtitle">Индивидуальные подсказки из метафорических карт</h4>
+											<h4 class="price-item__subtitle">+ Закрытый женский чат для вдохновляющего общения на 6 месяцев</h4>
+											<h4 class="price-item__subtitle">+ Абонемент участия в Женском клубе «Я есть СЧАСТЬЕ» с Дайной на 6 месяцев</h4>
+											<h4 class="price-item__subtitle">+ Проверка домашних заданий Дайной</h4>
+											<h4 class="price-item__subtitle">+ Ежедневная обратная связь от Дайны</h4>
+											<h4 class="price-item__subtitle">+ 4 встречи закрытой мини-группы с Дайной для проработки разных внутренних вопросов</h4>
+											<h4 class="price-item__subtitle">+ 2 индивидуальные онлайн-сессии коучинг-терапии с Дайной (длительность сессии — до 2 ч.)</h4>
+											<p class="price-item__attention">ВНИМАНИЕ: только 5 мест!</p>
+										</div>
+										<div class="price-item__footer">
+											<div class="price-item__prices">
+												<span class="price-item__old-price">300000 рублей / 3634 евро</span>
+												<span class="price-item__current-price">200000 рублей / 2420 евро</span>
+											</div>
+											<a href="#video" class="btn btn_full btn_center price-item__footer-btn">Дайна, хочу!</a>
+										</div>
 									</div>
-									<div class="price-item__footer">
-										<span class="price-item__old-price">300000 рублей / 3634 евро</span>
-										<span class="price-item__current-price">200000 рублей / 2420 евро</span>
-										<a href="#video" class="btn btn_full btn_center price-item__footer-btn">Дайна, хочу!</a>
-									</div>
+									<button class="acc__btn price-item__more">
+										<span class="price-item__more-text">Узнать подробнее</span>
+										<span class="price-item__more-icon"><img src="./img/icons/arrow-more.png" alt="Подробнее"></span>
+									</button>
 								</div>
 							</div>
 						</div>
@@ -442,7 +476,7 @@
 				<div class="attention__wrap">
 					<div class="attention__header">
 						<h2 class="attention__header-title">Внимание!!!</h2>
-						<p class="attention__header-text">Курс стартует <strong>28 октября</strong>, поэтому записаться на курс желательно уже сейчас, чтобы всем хватило мест.</p>
+						<p class="attention__header-text">Курс стартует <strong class="text-accent">28 октября</strong>, поэтому записаться на курс желательно уже сейчас, чтобы всем хватило мест.</p>
 					</div>
 					<div class="attention__body">
 						<div class="attention__content">
@@ -483,7 +517,7 @@
 								<h3 class="after__item-title">31 октября Ты получишь первое видео и начнёшь онлайн-путешествие к своему сердцу!</h3>
 							</div>
 						</div>
-						<p class="after__text">Само собой, что если что-то не будет получаться - зарегистрироваться, оплатить, не получишь какое-то письмо или возникнут дополнительные вопросы, то напиши мне на info@einberga.com и я Тебе быстро помогу.</p>
+						<p class="after__text">Само собой, что если что-то не будет получаться - зарегистрироваться, оплатить, не получишь какое-то письмо или возникнут дополнительные вопросы, то напиши мне на <a href="mailto:info@einberga.com">info@einberga.com</a> и я Тебе быстро помогу.</p>
 						<div class="after__please">
 							<h3 class="after__please-title">Пожалуйста!</h3>
 							<p class="after__please-text">Не откладывай свою жизнь "на потом", а своё счастье "на следующий раз". Просто возьми и сделай это сегодня!</p>
@@ -523,7 +557,7 @@
 					<div class="diss__body">
 						<ul class="diss__item-list">
 							<li class="diss__item">Ты посетила первый урок тренинга.</li>
-							<li class="diss__item">Ты объяснила по электронной почте info@einberga.com, почему тренинг не оправдал Твоих ожиданий.</li>
+							<li class="diss__item">Ты объяснила по электронной почте <a href="mailto:info@einberga.com">info@einberga.com</a>, почему тренинг не оправдал Твоих ожиданий.</li>
 							<li class="diss__item">Ты отправила нам это письмо не позднее 27 сентября.</li>
 						</ul>
 					</div>
@@ -573,7 +607,7 @@
 									<h3 class="faq-acc__header-title">Как я могу оплатить Курс?</h3>
 								</div>
 								<div class="faq-acc__body">
-									<p class="faq-acc__text">Для оплаты необходимо нажать на кнопку “ДАЙНА, УЖЕ ИДУ!”.<br>Далее откроется страница с выбором способа оплаты (карта VISA/Mastercard, Yandex, Webmoney и прочее). Выбери удобный для Тебя способ и оплачивай в 2 клика. Если возникнут сложности - обязательно напиши в службу поддержки info@einberga.com.<br>Рассрочка и оплата по частям не предлагается.</p>
+									<p class="faq-acc__text">Для оплаты необходимо нажать на кнопку “ДАЙНА, УЖЕ ИДУ!”.<br>Далее откроется страница с выбором способа оплаты (карта VISA/Mastercard, Yandex, Webmoney и прочее). Выбери удобный для Тебя способ и оплачивай в 2 клика. Если возникнут сложности - обязательно напиши в службу поддержки <a href="mailto:info@einberga.com">info@einberga.com</a>.<br>Рассрочка и оплата по частям не предлагается.</p>
 								</div>
 							</div>
 							<div class="faq-acc__item">

@@ -1,5 +1,10 @@
 .after {
     position: relative;
+    padding-top: 0;
+
+    @media (max-width: $tablet) {
+        padding-bottom: 90px;
+    }
 }
 
 .after__wrap {
@@ -27,14 +32,21 @@
 .after__item-list {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
     gap: 15px 85px;
+
+    @media (max-width: $tablet) {
+        gap: 15px 40px;
+    }
 }
 
 .after__item {
     max-width: 280px;
     width: 100%;
+
+    @media (max-width: $tablet) {
+        max-width: 220px;
+    }
 }
 
 .after__item-img {
@@ -57,6 +69,10 @@
     font-size: 20px;
     text-align: center;
     margin: 54px auto 0 auto;
+
+    & a {
+        text-decoration: underline;
+    }
 }
 
 // Пожалуйста

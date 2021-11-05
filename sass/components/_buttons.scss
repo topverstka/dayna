@@ -13,6 +13,10 @@
     transition: $tr;
     cursor: pointer;
 
+    @media (max-width: $tablet) {
+        font-size: 22px;
+    }
+
     & img {
         margin-left: 9px;
     }

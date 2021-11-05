@@ -8,7 +8,6 @@
     top: 0;
     left: 50%;
     max-width: 1000px;
-    width: 100%;
     transform: translate(-50%, 0);
 }
 
@@ -50,38 +49,75 @@
     flex-direction: column;
     align-items: center;
 
+    @media (max-width: $tablet) {
+        max-width: 150px;
+    }
+
     &:nth-child(1) {
         transform: translate(calc(-50% - 265px), calc(-50% + 80px));
+
+        @media (max-width: 800px) {
+            transform: translate(calc(-50% - 255px), calc(-50% + 70px));
+        }
     }
 
     &:nth-child(2) {
         transform: translate(calc(-50% - 305px), calc(-50% + -110px));
+
+        @media (max-width: 800px) {
+            transform: translate(calc(-50% - 235px), calc(-50% + -90px));
+        }
     }
 
     &:nth-child(3) {
         transform: translate(calc(-50% - 160px), calc(-50% + -195px));
+
+        @media (max-width: 800px) {
+            transform: translate(calc(-50% - 140px), calc(-50% + -195px));
+        }
     }
 
     &:nth-child(4) {
         transform: translate(calc(-50% + 125px), calc(-50% + -195px));
+
+        @media (max-width: 800px) {
+            transform: translate(calc(-50% + 105px), calc(-50% + -195px));
+        }
     }
 
     &:nth-child(5) {
         transform: translate(calc(-50% + 305px), calc(-50% + -110px));
+
+        @media (max-width: 800px) {
+            transform: translate(calc(-50% + 225px), calc(-50% + -90px));
+        }
     }
 
     &:nth-child(6) {
         transform: translate(calc(-50% + 265px), calc(-50% + 80px));
+
+        @media (max-width: 800px) {
+            transform: translate(calc(-50% + 255px), calc(-50% + 70px));
+        }
     }
 }
 
 .goals__item-img {
     width: 99px;
+
+    @media (max-width: 800px) {
+        width: 80px;
+    }
 }
 
 .goals__item-text {
+    font-size: 20px;
     text-align: center;
     margin: 10px 0 0 0;
+
+    @media (max-width: $tablet) {
+        font-size: 17px;
+    }
 }
 
 .goals__text {

@@ -1,208 +1,92 @@
-document.addEventListener("DOMContentLoaded", function() {
-
-	var d = document;
-
-	// Мобильное меню
-
-	var menuBurger = d.querySelector('.header__burger');
-	menuBurger.addEventListener('click', function(e){
-		e.preventDefault();
-		if(this.classList.contains('header__burger--active')){
-			this.classList.remove('header__burger--active');
-			d.querySelector('.header__nav').classList.remove('header__nav--active');
-			d.querySelector('body').classList.remove('stop');
-		}else{
-			this.classList.add('header__burger--active');
-			d.querySelector('.header__nav').classList.add('header__nav--active');
-			d.querySelector('body').classList.add('stop');
-		}
-	})
+// Служебные переменные
+const d = document;
+const body = d.querySelector('body');
 
 
-	// Скрытие мобильного меню и модалок
 
-	function findCloseBtns(){
-		let closeBtns = document.querySelectorAll('.close');
-		
-		for (let i = 0; i < closeBtns.length; i++) {
-			setUpClose(closeBtns[i]);
-		}
+//<------Служебные функции---------->
+
+// Сокращенный аналог querySelector
+function find(selector) {
+	return d.querySelector(selector)
+}
+
+// Сокращенный аналог querySelectorAll
+function findAll(selectors) {
+	return d.querySelectorAll(selectors)
+}
+
+// Удалить у всех элементов определенный класс
+function removeAll(items,itemClass) {   
+	if (typeof items == 'string') {
+	  items = document.querySelectorAll(items)
 	}
-
-	function setUpClose(closeBtn) {
-		closeBtn.addEventListener('click', function(e){
-			e.preventDefault();
-			menuBurger.classList.remove('header__burger--active');
-			d.querySelector('.header__nav').classList.remove('header__nav--active');
-			d.querySelector('body').classList.remove('stop');
-			d.querySelector('.modal').classList.remove('modal--active');
-		})
+	for (let i = 0; i < items.length; i++) {
+	  const item = items[i]
+	  item.classList.remove(itemClass)
 	}
-	
-	findCloseBtns();
+}
 
-
-
-	// Модальные окна скрипт открытия
-	function findBtnModal(){
-		let btnsModal = document.querySelectorAll('.btn--modal');
-		
-		for (let i = 0; i < btnsModal.length; i++) {
-			setUpBtnModal(btnsModal[i]);
-		}
-	}
-
-	function setUpBtnModal(btnModal) {
-		btnModal.addEventListener('click', function(e){
-			e.preventDefault();
-			d.querySelector('.modal').classList.add('modal--active');
-			d.querySelector('body').classList.add('stop');
-		})
-	}
-	
-	findBtnModal();
-
-
-	// Вызов модалки с заказом
-	function findBtnModalOrder(){
-		let btnsModal = document.querySelectorAll('.btn--modal-order');
-		for (let i = 0; i < btnsModal.length; i++) {
-			setUpBtnModalOrder(btnsModal[i]);
-		}
-	}
-
-	function setUpBtnModalOrder(btnModal) {
-		btnModal.addEventListener('click', function(e){
-			e.preventDefault();
-			d.querySelector('.modal .modal-window--order').classList.add('modal-window--active');
-		})
-	}
-	
-	findBtnModalOrder();
-
-	// Вызов с политикой конфиденциальности
-	function findBtnModalPrivacy(){
-		let btnsModal = document.querySelectorAll('.btn--modal-privacy');
-		for (let i = 0; i < btnsModal.length; i++) {
-			setUpBtnModalPrivacy(btnsModal[i]);
-		}
-	}
-
-	function setUpBtnModalPrivacy(btnModal) {
-		btnModal.addEventListener('click', function(e){
-			e.preventDefault();
-			d.querySelector('.modal .modal-window--privacy').classList.add('modal-window--active');
-		})
-	}
-	
-	findBtnModalPrivacy();
-
-
-
-	// Скрытие модалки при клике на оверлей
-	d.querySelector('.modal-overlay').addEventListener('click', function(e){
-		e.preventDefault();
-		d.querySelector('body').classList.remove('stop');
-		d.querySelector('.modal').classList.remove('modal--active');
-		d.querySelector('.modal-window--active').classList.remove('modal-window--active');
-	});
-	
-
-
-	// Ленивая загрузка изображений
-
-	[].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
-	  img.setAttribute('src', img.getAttribute('data-src'));
-	  img.onload = function() {
-	 img.removeAttribute('data-src');
-	  };
-	});
-
-
-
-
-	// Куки
-	function setCookie(c_name,value,exdays){
-        var exdate=new Date();
-           	exdate.setDate(exdate.getDate() + exdays);
-        var c_value = escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString()) + "; path=/";
-        document.cookie=c_name + "=" + c_value;
-   	}
-
-    function getMyCookie(name) {
-        var c = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
-            if (c) return c[2];
-            else return "";
-    }
-
+function getCoords(elem) {
+    var box = elem.getBoundingClientRect();
   
+    return {
+      top: box.top + pageYOffset,
+      left: box.left + pageXOffset
+    };
+}
 
+// Скрипт запрещающий скроллить тело страницы
+function bodyLock() {  
+	if (body.classList.contains('_lock')) {
+	  	body.classList.remove('_lock');
+	} else {
+	  	body.classList.add('_lock');
+	}
+}
+
+// Аккордеоны в разделе с ценами
+accordion()
+function accordion() {
+	const accElems = findAll('.acc')
+	
+	for (let i = 0; i < accElems.length; i++) {
+		const acc = accElems[i];
+		const accBtn = acc.querySelector('.acc__btn')
+		const accBody = acc.querySelector('.acc__body')
 		
-
-	// Слайдер с контрольными точками
-	  var swiper = new Swiper('.testimonials-swiper-container', {
-		slidesPerView: 1,
-		spaceBetween: 10,
-		loop: false,
-		// init: false,
-		pagination: {
-		  el: '.testimonials-swiper-pagination',
-		  clickable: true,
-		},
-		navigation: {
-			nextEl: '.testimonials-swiper-next',
-			prevEl: '.testimonials-swiper-prev',
-		},
-
-		breakpoints: {
-		  670: {
-			slidesPerView: 2,
-			spaceBetween: 20,
-		  },
-		  992: {
-			slidesPerView: 3,
-			spaceBetween: 20,
-		  },
-		  1300: {
-			slidesPerView: 4,
-			spaceBetween: 20,
-		  },
+		// После загрузки DOM аккордеоны с классом _show активируются
+		if (acc.classList.contains('_show')) {
+			console.log(accBody.scrollHeight)
+			accBody.style.maxHeight = accBody.scrollHeight + 'px';
 		}
-	  });
 
+		// При клике по кнопке "Узнать подробнее" активируется аккордеон
+		accBtn.addEventListener('click', () => {
+			scrollToStartAcc(acc)
+			removeAll(accElems, '_show')
+			acc.classList.add('_show')
 
-	  // LightGallary (Плагин типо FacnyBox только без JQ)
-	  lightGallery(document.querySelector('.lightgallery'));
+			for (let i = 0; i < accElems.length; i++) {
+				const acc = accElems[i];
+				const accBody = acc.querySelector('.acc__body')
 
-
-
-
-	  // FAQ
-	  function findFaq(){
-			let faqBoxes = document.querySelectorAll('.faq-box')
-
-			for(i = 0; i <= faqBoxes.length-1; i++){
-				setupFaq(faqBoxes[i]);
+				accBody.style.maxHeight = 0;
 			}
-		}
 
-		function setupFaq(faq){
-			faq.addEventListener('click', function(e) {
-				e.preventDefault();
-				if(this.classList.contains('active')){
-					this.classList.remove('active');
-				}else{
-					let activeElem = this.closest('.faq').querySelector('.faq-box.active');
-					if(activeElem){
-						activeElem.classList.remove('active');
-					}
-					this.classList.add('active');
-				}
-			});
-		}
-		findFaq();
+			if (acc.classList.contains('_show')) {
+				accBody.style.maxHeight = accBody.scrollHeight + 'px';
+			}
+			else {
+				accBody.style.maxHeight = 0;
+			}
+		})
+	}
 
-		// Инициализациия AOS анимаций
-		AOS.init();
-
-});
+	// Скролл до начала аккордеона
+	function scrollToStartAcc(acc) {
+		const distanceTop = getCoords(acc).top
+		window.scrollTo(0, distanceTop)
+		console.log(distanceTop)
+	}
+}

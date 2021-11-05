@@ -40,24 +40,48 @@
 
     & .about__section-img {
         margin: 31px 0 0 0;
+
+        @media (max-width: $tablet) {
+            margin-left: -150px;
+        }
     }
 }
 
 .about__section_second {
     flex-direction: row-reverse;
+    justify-content: center;
+    
+    @media (max-width: $tablet) {
+        justify-content: flex-start;
+    }
 
     & .about__section-img {
         margin: 16px 0 0 0;
+
+        @media (max-width: $tablet) {
+            min-width: none;
+            margin-right: -170px;
+            transform: translate(-20px, 0);
+        }
     }
 
     & .about__section-content {
         margin: 0 50px 0 0;
+        
+        @media (max-width: $tablet) {
+            max-width: 446px;
+            width: 100%;
+        }
     }
 }
 
 .about__section-img {
     min-width: 455px;
     width: 455px;
+
+    & img {
+        object-position: top;
+    }
 }
 
 .about__section-content {
@@ -67,6 +91,7 @@
 }
 
 .about__section-content-title {
+    font-size: 24px;
     font-weight: 700;
     text-align: left;
 }
@@ -77,6 +102,21 @@
 
 .about__section-content-item {
     font-size: 24px;
+
+    @media (max-width: $tablet) {
+        font-size: 22px;
+    }
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 21px;
+        height: 20px;
+        background: url(../img/icons/tick.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0 6px 0 0;
+    }
 
     &:not(:last-child) {
         margin: 0 0 12px 0;
@@ -92,7 +132,13 @@
 }
 
 .about__section-line {
+    position: relative;
+    left: 50%;
     max-width: 1000px;
-    width: 100%;
-    margin: 20px auto 0 auto;
+    transform: translate(-50%, 0);
+    margin: 20px 0 0 0;
+
+    @media (max-width: $tablet) {
+        margin-top: 60px;
+    }
 }

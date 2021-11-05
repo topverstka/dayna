@@ -8,4 +8,8 @@
 
 .section {
     padding: 60px 0;
+
+    @media (max-width: $tablet) {
+        padding: 40px 0;
+    }
 }

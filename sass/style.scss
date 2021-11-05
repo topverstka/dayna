@@ -9,12 +9,15 @@ $minHover: 768; // если хочешь убрать hover на телефон�
 $tr: .4s; // плавность
 
 // Переменные разрешения экрана (адаптив)
-$laptop-l: 1440;
-$laptop: 1024;
-$tablet: 768;
-$mobile-l: 425;
-$mobile-m: 375;
-$mobile-s: 320;
+// $laptop-l: 1440;
+$laptop: 1200px;
+$tablet: 900px;
+$mobile-l: 600px;
+// $laptop: 1024px;
+// $tablet: 768px;
+// $mobile-l: 425px;
+$mobile-m: 375px;
+$mobile-s: 320px;
 
 // Переменные цвета
 :root {
@@ -41,6 +44,14 @@ $bg-section: var(--bg-section);
 
 // GENERAL DOCUMENT STYLES
 
+::selection {
+    background: #fed9cd;
+    // color: #fff;
+}
+::-moz-selection {
+    background: #ffb7b7; /* Firefox */
+}
+
 body {
     color: $main;
     font-size: 20px;
@@ -52,7 +63,7 @@ body {
         overflow: hidden;
     }
 
-    @media (max-width: $tablet + px) {
+    @media (max-width: $tablet) {
         font-size: 14px;
     }
 }
