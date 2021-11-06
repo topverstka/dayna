@@ -90,7 +90,7 @@ function accordion() {
 }
 
 // Слайдер в разделах отзывах на экранах меньше 480px
-if (window.innerWidth <= 480) {
+if (window.innerWidth <= 440) {
 	const swiper = new Swiper('.reviews__slider', {	
 		slidesPerView: 1, // Кол-во показываемых слайдов
 		spaceBetween: 0, // Расстояние между слайдами
@@ -110,8 +110,8 @@ if (window.innerWidth <= 480) {
 		},
 
 		navigation: {
-			nextEl: '.swiper__arrow-next',
-			prevEl: '.swiper__arrow-prev',
+			nextEl: '.reviews__arrow-next',
+			prevEl: '.reviews__arrow-prev',
 		}
 	});
 }

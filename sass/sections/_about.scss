@@ -1,5 +1,8 @@
 .about {
 
+    @media (max-width: $mobile-m) {
+        padding-bottom: 36px;
+    }
 }
 
 .about__wrap {

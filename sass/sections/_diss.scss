@@ -1,5 +1,9 @@
 .diss {
     position: relative;
+    
+    @media (max-width: $mobile-m) {
+        margin: 36px 0 0 0;
+    }
 }
 
 .diss__line {

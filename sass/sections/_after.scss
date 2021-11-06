@@ -9,6 +9,10 @@
     @media (max-width: $mobile-l) {
         padding-bottom: 40px;
     }
+
+    @media (max-width: $mobile-m) {
+        margin: 0 0 36px 0;
+    }
 }
 
 .after__wrap {
