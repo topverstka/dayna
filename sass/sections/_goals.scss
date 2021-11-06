@@ -64,7 +64,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
-        margin: 32px 0 0 0;
+        margin: 48px 0 0 0;
     }
 
     @media (max-width: $mobile-s) {
@@ -96,7 +96,7 @@
         transform: translate(calc(-50% - 265px), calc(-50% + 80px));
 
         @media (max-width: 800px) {
-            transform: translate(calc(-50% - 255px), calc(-50% + 70px));
+            transform: translate(calc(-50% - 265px), calc(-50% + 70px));
         }
         
         @media (max-width: 700px) {

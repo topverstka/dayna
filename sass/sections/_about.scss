@@ -251,6 +251,10 @@
         margin-top: 60px;
     }
 
+    @media (width: 768px) {
+        margin-top: 20px;
+    }
+
     @media (max-width: $mobile-l) {
         margin-top: 43px;
     }
