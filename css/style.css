@@ -1398,6 +1398,16 @@ h2 {
   }
 }
 
+@media (max-width: 600px) {
+  .reviews__item-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .reviews__item {
   position: relative;
   width: 440px;

@@ -18,6 +18,10 @@
     @media (max-width: $tablet) {
         flex-direction: column;
     }
+
+    @media (max-width: $mobile-l) {
+        flex-direction: row;
+    }
 }
 
 .reviews__item {
