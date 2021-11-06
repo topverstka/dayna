@@ -1916,15 +1916,22 @@ h2 {
   margin: 54px 50px 0 0;
 }
 
+@media (max-width: 1200px) {
+  .about__section_second .about__section-content {
+    margin-bottom: 40px;
+  }
+}
+
 @media (max-width: 900px) {
   .about__section_second .about__section-content {
     width: 100%;
+    margin-bottom: 0;
   }
 }
 
 @media (max-width: 700px) {
   .about__section_second .about__section-content {
-    margin: 40px 0 0 0;
+    margin-top: 40px;
   }
 }
 
@@ -2019,6 +2026,12 @@ h2 {
 
 .about__section-content-btn {
   margin-top: 80px;
+}
+
+@media (max-width: 1200px) {
+  .about__section-content-btn {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2991,12 +3004,12 @@ h2 {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 15px 85px;
+  gap: 24px 85px;
 }
 
 @media (max-width: 900px) {
   .after__item-list {
-    gap: 15px 40px;
+    gap: 24px 40px;
   }
 }
 
@@ -3045,13 +3058,12 @@ h2 {
   font-size: 20px;
   color: var(--main);
   text-align: center;
-  margin: 26px 0 0 0;
+  margin: 12px 0 0 0;
 }
 
 @media (max-width: 440px) {
   .after__item-title {
     font-size: 18px;
-    margin: 15px 0 0 0;
   }
 }
 
