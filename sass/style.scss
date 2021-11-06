@@ -13,11 +13,13 @@ $tr: .4s; // плавность
 $laptop: 1200px;
 $tablet: 900px;
 $mobile-l: 600px;
+$mobile-m: 440px;
+$mobile-s: 350px;
 // $laptop: 1024px;
 // $tablet: 768px;
 // $mobile-l: 425px;
-$mobile-m: 375px;
-$mobile-s: 320px;
+// $mobile-m: 375px;
+// $mobile-s: 320px;
 
 // Переменные цвета
 :root {
@@ -64,7 +66,7 @@ body {
     }
 
     @media (max-width: $tablet) {
-        font-size: 14px;
+        // font-size: 14px;
     }
 }
 

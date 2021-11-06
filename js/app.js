@@ -57,7 +57,6 @@ function accordion() {
 		
 		// После загрузки DOM аккордеоны с классом _show активируются
 		if (acc.classList.contains('_show')) {
-			console.log(accBody.scrollHeight)
 			accBody.style.maxHeight = accBody.scrollHeight + 'px';
 		}
 
@@ -87,6 +86,9 @@ function accordion() {
 	function scrollToStartAcc(acc) {
 		const distanceTop = getCoords(acc).top
 		window.scrollTo(0, distanceTop)
-		console.log(distanceTop)
 	}
 }
+const burger = document.querySelector('.burger');
+burger.addEventListener('click', function(e) {
+  burger.classList.toggle('_active')
+})

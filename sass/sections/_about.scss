@@ -18,31 +18,102 @@
 .about__label {
     font-size: 30px;
     text-align: center;
+
+    @media (max-width: $mobile-l) {
+        font-size: 24px;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 22px;
+    }
 }
 
 .about__title {
     margin: 20px 0 0 0;
+
+    @media (max-width: $mobile-l) {
+        margin: 18px 0 0 0;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 26px;
+    }
 }
 
 .about__section-list {
     margin: 34px 0 0 0;
+
+    @media (max-width: $mobile-l) {
+        margin: 20px 0 0 0;
+    }
 }
 
 .about__section {
+    position: relative;
     display: flex;
+
+    @media (max-width: 700px) {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+    }
 
     &:not(:last-child) {
         margin: 0 0 50px 0;
+
+        @media (max-width: $mobile-l) {
+            margin: 0 0 25px 0;
+        }
+    }
+}
+
+.about__section-content-title {
+    position: absolute;
+    top: 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+
+    @media (max-width: 700px) {
+        position: initial;
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 20px;
     }
 }
 
 .about__section_first {
 
+    & .about__section-content-title {
+        left: 503px;
+
+        @media (max-width: $tablet) {
+            left: 353px;
+        }
+    }
+
     & .about__section-img {
         margin: 31px 0 0 0;
 
-        @media (max-width: $tablet) {
+        @media (min-width: 700px) and (max-width: $tablet) {
             margin-left: -150px;
+        }
+
+        @media (max-width: $mobile-l) {
+            margin: 24px 0 0 0;
+        }
+    }
+
+    & .about__section-content {
+        margin: 54px 0 0 50px;
+
+        @media (max-width: 700px) {
+            margin: 40px 0 0 0
+        }
+
+        @media (max-width: $mobile-l) {
+            margin: 20px 0 0 0;
         }
     }
 }
@@ -55,22 +126,32 @@
         justify-content: flex-start;
     }
 
+    & .about__section-content-title {
+        left: 0;
+    }
+
     & .about__section-img {
         margin: 16px 0 0 0;
 
-        @media (max-width: $tablet) {
-            min-width: none;
+        @media (min-width: 700px) and (max-width: $tablet) {
             margin-right: -170px;
             transform: translate(-20px, 0);
         }
     }
 
     & .about__section-content {
-        margin: 0 50px 0 0;
+        margin: 54px 50px 0 0;
         
         @media (max-width: $tablet) {
-            max-width: 446px;
             width: 100%;
+        }
+
+        @media (max-width: 700px) {
+            margin: 40px 0 0 0
+        }
+
+        @media (max-width: $mobile-l) {
+            margin: 20px 0 0 0;
         }
     }
 }
@@ -78,6 +159,16 @@
 .about__section-img {
     min-width: 455px;
     width: 455px;
+
+    @media (max-width: 700px) {
+        min-width: auto;
+        max-width: 340px;
+        width: auto;
+    }
+
+    @media (max-width: $mobile-l) {
+        max-width: 210px;
+    }
 
     & img {
         object-position: top;
@@ -87,17 +178,7 @@
 .about__section-content {
     display: flex;
     flex-direction: column;
-    margin: 0 0 0 50px;
-}
-
-.about__section-content-title {
-    font-size: 24px;
-    font-weight: 700;
-    text-align: left;
-}
-
-.about__section-content-list {
-    margin: 30px 0 0 0;
+    // margin: 54px 0 0 50px;
 }
 
 .about__section-content-item {
@@ -105,6 +186,10 @@
 
     @media (max-width: $tablet) {
         font-size: 22px;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 20px;
     }
 
     &::before {
@@ -116,6 +201,14 @@
         background-size: contain;
         background-position: center;
         margin: 0 6px 0 0;
+
+        @media (max-width: $mobile-l) {
+            width: 8px;
+            height: 8px;
+            background: #B69576;
+            border-radius: 100%;
+            margin: 0 8px 3px 0;
+        }
     }
 
     &:not(:last-child) {
@@ -129,6 +222,10 @@
 
 .about__section-content-btn {
     margin-top: 80px;
+
+    @media (max-width: $mobile-l) {
+        margin-top: 23px;
+    }
 }
 
 .about__section-line {
@@ -140,5 +237,9 @@
 
     @media (max-width: $tablet) {
         margin-top: 60px;
+    }
+
+    @media (max-width: $mobile-l) {
+        margin-top: 43px;
     }
 }

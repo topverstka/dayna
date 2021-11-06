@@ -16,6 +16,9 @@
 .faq__header-subtitle {
     font-size: 30px;
 
+    @media (max-width: $mobile-l) {
+        font-size: 28px;
+    }
 }
 
 .faq__title {
@@ -27,6 +30,15 @@
 
     @media (max-width: $tablet) {
         margin-top: 10px; 
+    }
+
+    @media (max-width: $mobile-l) {
+        font-size: 30px;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 28px;
+        margin: 29px 0 0 0;
     }
 }
 
@@ -64,6 +76,11 @@
     font-weight: 700;
     text-align: left;
     margin: 0 0 0 24px;
+
+    @media (max-width: $mobile-m) {
+        font-size: 18px;
+        margin: 0 0 0 20px;
+    }
 }
 
 .faq-acc__body {
@@ -73,6 +90,11 @@
 .faq-acc__text {
     font-size: 20px;
     margin: 12px 0 0 0;
+
+    @media (max-width: $mobile-m) {
+        font-size: 18px;
+        margin: 8px 0 0 0;
+    }
 
     a {
         text-decoration: underline;

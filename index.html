@@ -34,13 +34,20 @@
 			<div class="container">
 				<div class="main__body">
 					<h1 class="main__title">Я ОТКРЫВАЮСЬ СЧАСТЬЮ!</h1>
-					<p class="main__descr">Не откладывай свою жизнь «на потом», <br>а своё счастье «на следующий раз»</p>
+					<p class="main__descr">Не откладывай свою жизнь «на потом», а своё счастье «на следующий раз»</p>
 					<a href="#video" class="btn btn_full btn_center main__btn">Хочу счастья</a>
 					<span class="main__label">с 26 октября</span>
 				</div>
 			</div>
 			<div class="main__dec">
-				<div class="main__dec-flower-left"><img src="./img/main/flower-left.png" alt="Цветок"></div>
+				<div class="main__dec-flower-left">
+					<picture>
+						<source media="(min-width: 600px)" srcset="./img/main/flower-left.png">
+						<source media="(min-width: 440px) and (max-width: 600px)" srcset="./img/main/flower-left-max600.png">
+						<source media="(max-width: 440px)" srcset="./img/main/flower-left-max440.png" width="570" height="360">
+						<img src="./img/main/flower-left.png" alt="Цветок">
+					</picture>
+				</div>
 				<div class="main__dec-flower-right">
 					<img src="./img/main/flower-right-1.png" alt="Цветок">
 					<img src="./img/main/flower-right-2.png" alt="Цветок">
@@ -103,7 +110,7 @@
 			<div class="container">
 				<div class="parameters__body">
 					<span class="parameters__label">Работа над собой состоит из 8 модулей по 7 дней каждый</span>
-					<h2 class="parameters__title">В них мы затронем 8 Основных<br>Параметров Женщины:</h2>
+					<h2 class="parameters__title">В них мы затронем 8 Основных Параметров Женщины:</h2>
 					<div class="parameters__list">
 						<div class="parameters__item">
 							<div class="parameters__item-img"><img src="./img/parameters/1.png" alt=""></div>
@@ -172,6 +179,7 @@
 					</div>
 				</div>
 			</div>
+			<div class="section-line parameters-line"></div>
 		</section>
 		<section class="section reviews">
 			<div class="container">
@@ -244,9 +252,9 @@
 					<div class="about__body">
 						<div class="about__section-list">
 							<div class="about__section about__section_first">
+								<h3 class="about__section-content-title">1) помогла себе:</h3>
 								<div class="about__section-img"><img src="./img/about/step-1.png" alt=""></div>
 								<div class="about__section-content">
-									<h3 class="about__section-content-title">1) помогла себе:</h3>
 									<ul class="about__section-content-list">
 										<li class="about__section-content-item">От абсолютного перфекционизма и карьеризма — до глубокого самопринятия и <strong>баланса</strong> жизненных приоритетов;</li>
 										<li class="about__section-content-item">От созависимости и постоянных претензий к самой себе — к выходу из этого порочного круга <strong>в добром здравии</strong>;</li>
@@ -260,9 +268,9 @@
 								</div>
 							</div>
 							<div class="about__section about__section_second">
+								<h3 class="about__section-content-title">2) помогла другим:</h3>
 								<div class="about__section-img"><img src="./img/about/step-2.png" alt=""></div>
 								<div class="about__section-content">
-									<h3 class="about__section-content-title">2) помогла другим:</h3>
 									<ul class="about__section-content-list">
 										<li class="about__section-content-item">С 2007 года — тренер, эзотерик, наставник;</li>
 										<li class="about__section-content-item">С 2012 года —  коуч;</li>
@@ -305,7 +313,7 @@
 			<div class="container">
 				<div class="goals__wrap">
 					<div class="goals__header">
-						<h2 class="goals__title">Именно поэтому я очень хочу, <br>чтобы Мы вместе прошли дорогу:</h2>
+						<h2 class="goals__title">Именно поэтому я очень хочу, чтобы Мы вместе прошли дорогу:</h2>
 					</div>
 					<div class="goals__body">
 						<div class="goals__img"><img src="./img/goals/women.png" alt=""></div>

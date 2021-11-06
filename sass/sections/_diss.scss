@@ -23,22 +23,38 @@
     width: 100%;
     font-size: 24px;
     margin: 0 auto;
+
+    @media (max-width: $mobile-l) {
+        font-size: 20px;
+    }
 }
 
 .diss__body {
     margin: 40px 0 0 0;
+
+    @media (max-width: $mobile-l) {
+        margin: 28px 0 0 0;
+    }
 }
 
 .diss__item-list {
     max-width: 700px;
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: $mobile-l) {
+        font-size: 18px;
+    }
 }
 
 .diss__item {
     position: relative;
     padding: 0 0 0 37px;
     margin: 12px 0;
+
+    @media (max-width: $mobile-l) {
+        padding: 0 0 0 16px;
+    }
 
     &:before {
         content: '';
@@ -53,9 +69,22 @@
         background: url(../img/icons/tick.png) no-repeat;
         background-size: contain;
         background-position: center;
+
+        @media (max-width: $mobile-l) {
+            min-width: 8px;
+            width: 8px;
+            height: 8px;
+            background: #B69576;
+            border-radius: 100%;
+            margin: 4px 0 0 0;
+        }
     }
 
     & a {
         text-decoration: underline;
     }
+}
+
+@keyframes identifier {
+    
 }

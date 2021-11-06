@@ -12,12 +12,21 @@
         position: relative;
         padding-top: 70px;
     }
+
+    @media (max-width: $mobile-l) {
+        padding-top: 36px;
+    }
 }
 
 .footer__wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $mobile-l) {
+        flex-direction: column;
+
+    }
 }
 
 .footer__content {
@@ -54,6 +63,13 @@
         justify-content: center;
         transform: translate(-50%, 0);
     }
+
+    @media (max-width: $mobile-l) {
+        position: initial;
+        flex-direction: column;
+        transform: none;
+        margin: 38px 0;
+    }
 }
 
 .footer__policy-link {
@@ -69,6 +85,10 @@
                 content: '/';
                 font-size: inherit;
                 margin: 0 4px;
+
+                @media (max-width: $mobile-l) {
+                    display: none;
+                }
             }
         }
     }

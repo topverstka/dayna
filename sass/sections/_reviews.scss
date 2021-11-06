@@ -58,6 +58,8 @@
 }
 
 .reviews__item-text {
+    position: relative;
+    z-index: 1;
     font-size: 20px;
 
     @media (max-width: 1000px) {
@@ -104,6 +106,10 @@
 
 .reviews__item_second {
     margin: 0 0 0 50px;
+
+    @media (max-width: $tablet) {
+        margin: 0;
+    }
     
     & .reviews__item-text {
         padding: 45px 22px 45px 55px;

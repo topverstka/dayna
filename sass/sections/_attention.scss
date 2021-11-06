@@ -24,6 +24,11 @@
     font-size: 24px;
     margin: 50px 0 0 0;
 
+    @media (max-width: $mobile-m) {
+        font-size: 22px;
+        margin: 32px 0 0 0;
+    }
+
     & strong {
         font-size: 26px;
     }
@@ -36,7 +41,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 0;
+
+    @media (max-width: $mobile-l) {
+        flex-direction: column;
+        margin: 48px auto 0;
+    }
+
+    @media (max-width: $mobile-m) {
+        margin-top: 32px;
+    }
 }
 
 .attention__content {
@@ -47,12 +61,30 @@
 
 .attention__text {
     font-size: 24px;
+
+    @media (max-width: $mobile-l) {
+        text-align: center;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 22px;
+    }
 }
 
 .attention__img {
     min-width: 300px;
     width: 300px;
     margin: 0 0 0 24px;
+
+    @media (max-width: $mobile-l) {
+        margin: 30px 0 0 0;
+    }
+
+    @media (max-width: $mobile-m) {
+        min-width: 250px;
+        width: 250px;
+        margin: 20px 0 0 0;
+    }
 }
 
 .attention__line {

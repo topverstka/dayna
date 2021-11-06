@@ -11,6 +11,10 @@
 // Модификаторы
 .price-item_padding {
     padding: 0 22px;
+
+    @media (max-width: $mobile-m) {
+        padding: 0 12px;
+    }
 }
 
 .price__header {
@@ -31,6 +35,15 @@
         max-width: 580px;
     }
 
+    @media (max-width: $mobile-l) {
+        max-width: 450px;
+        font-size: 24px;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 22px;
+    }
+
     & strong {
         font-weight: 700;
     }
@@ -39,11 +52,30 @@
 .price__header-text {
     font-size: 24px;
     margin: 32px 0 0 0;
+
+    @media (max-width: $mobile-l) {
+        font-size: 22px;
+        margin: 17px 0 0 0;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 18px;
+    }
 }
 
 .price__header-title {
     font-size: 36px;
     margin: 42px 0 0 0;
+
+    @media (max-width: $mobile-l) {
+        font-size: 30px;
+        margin: 25px 0 0 0;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 28px;
+        margin: 18px 0 0 0;
+    }
 
     & strong {
         font-weight: 700;
@@ -51,7 +83,7 @@
 }
 
 .price__body {
-    margin: 54px 0 0 0;
+    margin: 24px 0 0 0;
 }
 
 .price-item__list {
@@ -61,7 +93,7 @@
 
     @media (max-width: $laptop) {
         grid-template-columns: minmax(min-content, 620px);
-        row-gap: 28px;
+        row-gap: 33px;
         justify-content: center;
     }
 }
@@ -116,6 +148,10 @@
 
 .price-item__title {
     font-size: 30px;
+
+    @media (max-width: $mobile-m) {
+        font-size: 24px;
+    }
 }
 
 .price-item__line {
@@ -135,6 +171,10 @@
 
     @media (max-width: $laptop) {
         margin: 100px 0 36px 0;
+    }
+
+    @media (max-width: $mobile-m) {
+        margin-bottom: 27px;
     }
 }
 
@@ -157,7 +197,20 @@
             background-size: contain;
             background-position: center;
             margin: 0 20px 0 0;
+
+            @media (max-width: $mobile-m) {
+                min-width: 8px;
+                width: 8px;
+                height: 8px;
+                background: #B69576;
+                border-radius: 100%;
+                margin: 6px 8px 0 0;
+            }
         }
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 18px;
     }
 }
 
@@ -167,17 +220,30 @@
     @media (max-width: $laptop) {
         padding: 0 0 0 40px;
     }
+
+    @media (max-width: $mobile-m) {
+        padding: 0 0 0 16px;
+    }
 }
 
 .price-item__li {
     margin: 12px 0;
+
+    @media (max-width: $mobile-m) {
+        font-size: 18px;
+    }
 }
 
 .price-item__text {
-    margin: 12px 0;
+    margin: 12px 0 0 0;
 
     @media (max-width: $laptop) {
         padding: 0 0 0 40px;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 18px;
+        padding: 0 0 0 16px;
     }
 }
 
@@ -200,6 +266,10 @@
     text-align: center;
     padding: 0 12px 48px 12px;
     margin: auto 0 0 0;
+
+    @media (max-width: $mobile-m) {
+        padding-bottom: 40px;
+    }
 }
 
 .price-item__prices {

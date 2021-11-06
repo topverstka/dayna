@@ -5,6 +5,10 @@
     @media (max-width: $tablet) {
         padding-bottom: 90px;
     }
+
+    @media (max-width: $mobile-l) {
+        padding-bottom: 40px;
+    }
 }
 
 .after__wrap {
@@ -21,11 +25,19 @@
     width: 100%;
     font-size: 30px;
     margin: 0 auto;
+
+    @media (max-width: $mobile-m) {
+        font-size: 24px;
+    }
 }
 
 // Тело
 .after__body {
     margin: 60px 0 0 0;
+
+    @media (max-width: $mobile-l) {
+        margin: 30px 0 0 0;
+    }
 }
 
 // Карточки
@@ -38,6 +50,14 @@
     @media (max-width: $tablet) {
         gap: 15px 40px;
     }
+
+    @media (max-width: $mobile-l) {
+        gap: 15px 30px;
+    }
+
+    @media (max-width: $mobile-m) {
+        gap: 15px 25px;
+    }
 }
 
 .after__item {
@@ -46,6 +66,14 @@
 
     @media (max-width: $tablet) {
         max-width: 220px;
+    }
+
+    @media (max-width: $mobile-l) {
+        max-width: 200px;
+    }
+
+    @media (max-width: 480px) {
+        max-width: 150px;
     }
 }
 
@@ -60,6 +88,11 @@
     color: $main;
     text-align: center;
     margin: 26px 0 0 0;
+
+    @media (max-width: $mobile-m) {
+        font-size: 18px;
+        margin: 15px 0 0 0;
+    }
 }
 
 // Контентная часть
@@ -73,6 +106,14 @@
     & a {
         text-decoration: underline;
     }
+
+    @media (max-width: $mobile-l) {
+        margin: 30px auto 0;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 18px;
+    }
 }
 
 // Пожалуйста
@@ -80,6 +121,10 @@
     display: flex;
     flex-direction: column;
     margin: 45px 0 0 0;
+
+    @media (max-width: $mobile-m) {
+        margin: 18px 0 0 0;
+    }
 }
 
 .after__please-title {
@@ -97,12 +142,20 @@
     font-style: italic;
     text-align: center;
     margin: 28px auto 0;
+
+    @media (max-width: $mobile-m) {
+        margin-top: 15px;
+    }
 }
 
 .after__please-btn {
     max-width: 250px;
     width: 100%;
     margin: 37px auto 0;
+
+    @media (max-width: $mobile-m) {
+        margin-top: 34px;
+    }
 }
 
 .after__line {

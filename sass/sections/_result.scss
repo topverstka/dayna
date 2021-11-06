@@ -7,6 +7,10 @@
     @media (max-width: $tablet) {
         padding-bottom: 60px;
     }
+
+    @media (max-width: $mobile-m) {
+        padding-bottom: 50px;
+    }
 }
 
 .result__wrap {
@@ -23,16 +27,26 @@
     font-size: 30px;
     font-weight: 700;
     margin: 0 auto;
+
+    @media (max-width: $mobile-m) {
+        font-size: 28px;
+    }
 }
 
 .result__body {
     position: relative;
+    margin-top: 45px;
+
+    @media (max-width: $mobile-m) {
+        margin-top: 17px;
+    }
 }
 
 .result__btn {
+    position: relative;
+    z-index: 1;
     max-width: 250px;
     width: 100%;
-    margin-top: 45px;
 }
 
 .result__dec {
@@ -48,9 +62,27 @@
 .result__flower-left {
     width: 190px;
     transform: translate(calc(-50% + -260px), calc(-50% + 50px));
+
+    @media (max-width: $mobile-l) {
+        transform: translate(calc(-50% + -190px), calc(-50% + 50px));
+    }
+
+    @media (max-width: $mobile-m) {
+        width: 150px;
+        transform: translate(calc(-50% + -140px), calc(-50% + 70px));
+    }
 }
 
 .result__flower-right {
     width: 223px;
     transform: translate(calc(-50% + 270px), calc(-50% + 50px));
+
+    @media (max-width: $mobile-l) {
+        transform: translate(calc(-50% + 190px), calc(-50% + 50px));
+    }
+
+    @media (max-width: $mobile-m) {
+        width: 150px;
+        transform: translate(calc(-50% + 130px), calc(-50% + 60px));
+    }
 }

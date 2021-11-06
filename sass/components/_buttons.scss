@@ -15,7 +15,12 @@
 
     @media (max-width: $tablet) {
         font-size: 22px;
+        padding: 20px 32px;
     }
+
+    // @media (max-width: $mobile-m) {
+    //     font-size: 20px;
+    // }
 
     & img {
         margin-left: 9px;
