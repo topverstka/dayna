@@ -48,11 +48,27 @@ $bg-section: var(--bg-section);
 
 ::selection {
     background: #fed9cd;
-    // color: #fff;
 }
 ::-moz-selection {
-    background: #ffb7b7; /* Firefox */
+    background: #ffb7b7;
 }
+
+body::-webkit-scrollbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: .6em;
+    height: 100%;
+}
+
+body::-webkit-scrollbar-track {
+    background: #FEF1EB;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #CAC1BC;
+}
+
 
 body {
     color: $main;
@@ -83,7 +99,11 @@ body {
     color: $accent;
 }
 
+@import '_preloader';
 @import '_grid';
+
+// Библиотеки
+@import 'libs/_animate';
 
 // Компоненты
 @import 'components/_buttons';
