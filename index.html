@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/style.css"> 
 </head> 
 <body>
-	<div class="preloader">
+	<!-- <div class="preloader">
 		<div class="preloader__body">
 			<div class="preloader__icon">
 				<svg width="299" height="60" viewBox="0 0 299 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,7 @@
 				</svg>						
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="wrapper">
 		<main class="main">
 			<header class="header">
@@ -237,19 +237,6 @@
 					<div class="video__body wow fadeIn">
 						<div class="video__block">
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/iFtCLjT8e_4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							<!-- <div class="video__content">
-								<p class="video__text">Видео-приглашение<br>на бесплатный вебинар</p>
-								<span class="video__label">от Дайны Ейнберга</span>
-							</div>
-							<div class="video__play">
-								<div class="video__play-icon"><img src="./img/video/play.svg" alt=""></div>
-							</div>
-							<div class="video__dec">
-								<div class="video__flower video__flower-left-1"><img src="./img/video/flower-left-1.png" alt=""></div>
-								<div class="video__flower video__flower-left-2"><img src="./img/video/flower-right-1.png" alt=""></div>
-
-								<div class="video__dayna"><img src="./img/video/dayna.png" alt=""></div>
-							</div> -->
 						</div>
 						<form action="#" method="POST" class="video__form">
 							<div class="video__input-list">
@@ -710,8 +697,8 @@
 						<h2 class="footer__content-slogan">Я ОТКРЫВАЮСЬ СЧАСТЬЮ!</h2>
 					</div>
 					<div class="footer__policy">
-						<a href="#video" class="footer__policy-link">Политика конфиденциальности</a>
-						<a href="#video" class="footer__policy-link">Noteikumi un Privātuma politika</a>
+						<a href="javascript:void(0)" class="footer__policy-link" data-modal-open="privacy-policy">Политика конфиденциальности</a>
+						<a href="javascript:void(0)" class="footer__policy-link" data-modal-open="privacy-policy-lv">Noteikumi un Privātuma politika</a>
 					</div>
 					<div class="footer__contacts">
 						<a href="mailto:info@einberga.com" class="footer__email">
@@ -721,14 +708,44 @@
 						<div class="footer__social">
 							<span class="footer__social-text">Присоединяйтесь</span>
 							<div class="footer__social-list">
-								<a href="#video" class="footer__social-link"><img src="./img/icons/instagram.png" alt="instagram"></a>
-								<a href="#video" class="footer__social-link"><img src="./img/icons/facebook.png" alt="facebook"></a>
+								<a href="#" class="footer__social-link"><img src="./img/icons/instagram.png" alt="instagram"></a>
+								<a href="#" class="footer__social-link"><img src="./img/icons/facebook.png" alt="facebook"></a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</footer>
+	</div>
+
+	<!-- Модальные окна -->
+	<div class="modal" id="privacy-policy">
+		<div class="modal__body">
+			<div class="modal__content">
+				<h2>Политика конфиденциальности</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitia.</p>
+				<div class="modal__close">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="20" height="2.11" transform="matrix(0.707107 0.707107 -0.719783 0.694199 3.75928 1.92889)" fill="#0C2A4E"/>
+						<rect width="20" height="2.11" transform="matrix(0.707107 -0.707107 0.719783 0.694199 2.24072 16.071)" fill="#0C2A4E"/>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="privacy-policy-lv">
+		<div class="modal__body">
+			<div class="modal__content">
+				<h2>Noteikumi un Privātuma politika</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitia.</p>
+				<div class="modal__close">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="20" height="2.11" transform="matrix(0.707107 0.707107 -0.719783 0.694199 3.75928 1.92889)" fill="#0C2A4E"/>
+						<rect width="20" height="2.11" transform="matrix(0.707107 -0.707107 0.719783 0.694199 2.24072 16.071)" fill="#0C2A4E"/>
+					</svg>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script src="js/wow.min.js"></script>
