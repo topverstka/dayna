@@ -31,7 +31,11 @@
     }
 
     & strong {
-        font-size: 26px;
+        font-size: 30px;
+
+        @media (max-width: $mobile-m) {
+            font-size: 22px;
+        }
     }
 }
 
@@ -69,6 +73,13 @@
 
     @media (max-width: $mobile-m) {
         font-size: 22px;
+    }
+
+    & strong {
+        
+        @media (max-width: $mobile-m) {
+            white-space: nowrap;
+        }
     }
 }
 

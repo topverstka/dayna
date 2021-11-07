@@ -2,20 +2,7 @@
 const d = document;
 const body = d.querySelector('body');
 
-
-
 //<------Служебные функции---------->
-
-// Сокращенный аналог querySelector
-function find(selector) {
-	return d.querySelector(selector)
-}
-
-// Сокращенный аналог querySelectorAll
-function findAll(selectors) {
-	return d.querySelectorAll(selectors)
-}
-
 // Удалить у всех элементов определенный класс
 function removeAll(items,itemClass) {   
 	if (typeof items == 'string') {
@@ -45,10 +32,20 @@ function bodyLock() {
 	}
 }
 
+// Изменение даты на 2 дня вперед
+changeDate()
+function changeDate() {
+	const elem = document.querySelector('.main__label span')
+	const date = new Date()
+	const day = date.getDate()
+
+	elem.innerText = day + 2
+}
+
 // Аккордеоны в разделе с ценами
 accordion()
 function accordion() {
-	const accElems = findAll('.acc')
+	const accElems = d.querySelectorAll('.acc')
 	
 	for (let i = 0; i < accElems.length; i++) {
 		const acc = accElems[i];
@@ -91,23 +88,10 @@ function accordion() {
 
 // Слайдер в разделах отзывах на экранах меньше 480px
 if (window.innerWidth <= 440) {
-	const swiper = new Swiper('.reviews__slider', {	
-		slidesPerView: 1, // Кол-во показываемых слайдов
-		spaceBetween: 0, // Расстояние между слайдами
-		// loop: true, // Бесконечный слайдер
-		// freeMode: true, // Слайдеры не зафиксированны
-
-		breakpoints: {
-			1200: {
-
-			},
-			700: {
-
-			},
-			400: {
-
-			}
-		},
+	const reviewsSlider = new Swiper('.reviews__slider', {	
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
 
 		navigation: {
 			nextEl: '.reviews__arrow-next',

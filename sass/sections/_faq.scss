@@ -19,6 +19,10 @@
     @media (max-width: $mobile-l) {
         font-size: 28px;
     }
+
+    @media (max-width: $mobile-m) {
+        font-size: 24px;
+    }
 }
 
 .faq__title {
@@ -38,7 +42,7 @@
 
     @media (max-width: $mobile-m) {
         font-size: 28px;
-        margin: 29px 0 0 0;
+        margin: 12px 0 0 0;
     }
 }
 

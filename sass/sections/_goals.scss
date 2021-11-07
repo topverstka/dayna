@@ -63,12 +63,14 @@
     @media (max-width: $mobile-l) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
+        column-gap: 24px;
+        row-gap: 24px;
         margin: 48px 0 0 0;
     }
 
     @media (max-width: $mobile-s) {
-        gap: 16px;
+        column-gap: 16px;
+        row-gap: 16px;
     }
 }
 
