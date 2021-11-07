@@ -55,7 +55,7 @@
     border: 2px solid transparent;
     background: $accent;
 
-    @media (min-width: $minHover + px) {
+    @media (min-width: $minHover) {
     
         &:hover {
             color: #fff; 

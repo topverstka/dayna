@@ -1,13 +1,13 @@
-.swiper{
+.swiper {
     margin-bottom: 25px;
     position: relative;
 }
-    
-.swiper-container{
+
+.swiper-container {
     width: 100%;
 }
-    
-.swiper-container{
+
+.swiper-container {
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -16,8 +16,8 @@
     padding: 0;
     z-index: 1;
 }
-  
-.swiper-wrapper{
+
+.swiper-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
@@ -26,8 +26,8 @@
     transition-property: transform;
     box-sizing: content-box;
 }
-  
-.swiper-slide{
+
+.swiper-slide {
     flex-shrink: 0;
     width: 100%;
     height: 100%;
@@ -39,8 +39,8 @@
     justify-content: center;
     align-items: center;
 }
-  
-.swiper-pagination{
+
+.swiper-pagination {
     margin-top: 16px;
     display: flex;
     justify-content: center;
@@ -49,8 +49,8 @@
     width: 100%;
     height: 20px;
 }
-   
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
     display: inline-block;
     width: 8px;
     height: 8px;
@@ -58,17 +58,19 @@
     background-color: #d9d9d9;
     margin-right: 2.1875VW;
     transition: all 0.2s;
-    &:last-child{
+
+    &:last-child {
         margin-right: 0;
     }
-    &-active{
+
+    &-active {
         background-color: $accent;
     }
 }
-    
 
 
-.swiper-btn{
+
+.swiper-btn {
     height: 30px;
     width: 30px;
     justify-self: center;
@@ -78,109 +80,116 @@
     left: 0px;
     z-index: 1;
     padding: 25px;
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     transform: translateY(-50%);
-    &:after{
+
+    &:after {
         content: "";
         display: block;
         border: 10px solid transparent;
         position: relative;
         bottom: 10px;
     }
-    &-prev{
-        &::after{
+
+    &-prev {
+        &::after {
             border-right: 15px solid #fff;
             right: 20px;
         }
     }
-        
-    &-next{
+
+    &-next {
         left: auto;
         right: 0px;
-        &::after{
+
+        &::after {
             border-left: 15px solid #fff;
             left: -7px;
         }
     }
-        
+
 }
-    
-.swiper-button-disabled{
+
+.swiper-button-disabled {
     opacity: 0.4;
 }
 
 
-@media (min-width: 670px){
-    .swiper{
+@media (min-width: 670px) {
+    .swiper {
         margin-bottom: 35px;
     }
-    .swiper-pagination{
+
+    .swiper-pagination {
         bottom: -45px;
     }
 }
 
 
-@media (min-width: 992px){
-    .swiper{
+@media (min-width: 992px) {
+    .swiper {
         margin-bottom: 45px;
     }
 
-    .swiper-btn{
+    .swiper-btn {
         transition: all 0.2s;
-        &:hover{
-            cursor: pointer;
-        }
-        &-prev{
-            &::after{
+        cursor: pointer;
+
+        &-prev {
+            &::after {
                 border-right: 15px solid $accent
             }
         }
-            
-        &-next{
-            &::after{
+
+        &-next {
+            &::after {
                 border-left: 15px solid $accent
             }
-        } 
+        }
     }
-    
-    .swiper-pagination{
+
+    .swiper-pagination {
         bottom: -50px;
     }
-        
-    .swiper-pagination-bullet{
+
+    .swiper-pagination-bullet {
         width: 10px;
         height: 10px;
-        &:hover{
-            cursor: pointer;
-        }
+        cursor: pointer;
     }
 }
 
 
 
-@media (min-width: 1300px){
-    .swiper-btn{
+@media (min-width: 1300px) {
+    .swiper-btn {
         background-color: transparent;
         border: 1px solid $accent;
 
-        &-prev{
+        &-prev {
             left: -60px;
-            &:hover{
+
+            &:hover {
                 background-color: $accent;
-                &::after{
+
+                &::after {
                     border-right: 15px solid #fff;
-                }       
+                }
             }
         }
-            
-        &-next{
+
+        &-next {
             right: -60px;
-            &:hover{
-                background-color: $accent;
-                &::after{
-                    border-left: 15px solid #fff;
-                }   
-            }   
+
+            @media (min-width: $minHover) {
+                &:hover {
+                    background-color: $accent;
+    
+                    &::after {
+                        border-left: 15px solid #fff;
+                    }
+                }
+            }
         }
     }
 }

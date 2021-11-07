@@ -78,14 +78,14 @@ a:visited {
 }
 
 a:hover {
-    @media (min-width: $minHover + px) {
+    @media (min-width: $minHover) {
         text-decoration: none;
         color: $accent;
     }
 }
 
 a:active {
-    @media (max-width: $minHover + px) {
+    @media (max-width: $minHover) {
         text-decoration: none;
         color: $accent;
     }
@@ -116,3 +116,5 @@ h6 {
     font-size: inherit;
     font-weight: inherit;
 }
+
+

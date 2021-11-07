@@ -511,8 +511,6 @@ input:required:valid, textarea:required:valid, button:required:valid {
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
-  }
-  .swiper-btn:hover {
     cursor: pointer;
   }
   .swiper-btn-prev::after {
@@ -527,8 +525,6 @@ input:required:valid, textarea:required:valid, button:required:valid {
   .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
-  }
-  .swiper-pagination-bullet:hover {
     cursor: pointer;
   }
 }
@@ -550,6 +546,9 @@ input:required:valid, textarea:required:valid, button:required:valid {
   .swiper-btn-next {
     right: -60px;
   }
+}
+
+@media (min-width: 1300px) and (min-width: 768px) {
   .swiper-btn-next:hover {
     background-color: var(--accent);
   }
