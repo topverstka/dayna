@@ -68,6 +68,7 @@
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    background-attachment: fixed;
 
     @media (max-width: $laptop) {
         height: 560px;

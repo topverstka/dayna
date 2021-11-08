@@ -2,6 +2,7 @@
     background: url(../img/price/bg.png) no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .price__wrap {
@@ -176,6 +177,8 @@
     @media (max-width: $mobile-m) {
         margin-bottom: 27px;
     }
+
+    
 }
 
 .price-item__subtitle {
