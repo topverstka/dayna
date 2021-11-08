@@ -42,6 +42,27 @@ function changeDate() {
 	elem.innerText = day + 2
 }
 
+
+// Функция для плавной прокрутки якорных ссылок
+function scrollToAnchor(distanceTop = 0) {
+    const linkElems = document.querySelectorAll('[href^="#"]')
+    for (let i = 0; i < linkElems.length; i++) {
+        const link = linkElems[i];
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            let href = link.getAttribute('href');
+            let anchor = document.querySelector(href);
+            window.scroll({
+                top: anchor.getBoundingClientRect().top + pageYOffset - distanceTop,
+                left: 0,
+                behavior: 'smooth'
+            })
+        })
+    }
+}
+
+scrollToAnchor(distanceTop = 0);
+
 // Аккордеоны в разделе с ценами
 accordion()
 function accordion() {
