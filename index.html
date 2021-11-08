@@ -250,6 +250,7 @@
 									<input id="user-email" type="email" name="email" placeholder="Введите ваш e-mail" required>
 								</div>
 							</div>
+							<p class="message-error"></p>
 							<button class="btn btn_full btn_center video__btn wow bounceIn">Записаться на вебинар</button>
 						</form>
 					</div>
@@ -777,7 +778,7 @@
 
       // Селектор для вывода сообщений об ошибке. Не привязан к форме.
       // Если селектор не указан, сообщение об ошибке будет выведено через alert
-      message: '',
+      message: '.message-error',
 
       // селекторы для вывода даты и времени ближайшего сеанса. Не привязано к форме.
       // Если селекторы не заданы, то дата и время никуда не выводятся.
