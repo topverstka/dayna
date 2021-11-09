@@ -15,30 +15,32 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    column-gap: 44px;
-    row-gap: 12px;
+    // column-gap: 44px;
+    // row-gap: 12px;
     margin: 50px auto 0;
 
     @media (max-width: $tablet) {
-        column-gap: 24px;
+        // column-gap: 24px;
         margin: 30px auto 0;
     }
 
     @media (max-width: $mobile-l) {
-        column-gap: 48px;
+        // column-gap: 48px;
     }
 
     @media (max-width: $mobile-m) {
-        column-gap: 16px;
+        // column-gap: 16px;
     }
 }
 
 .situation__item {
     width: 200px;
     justify-self: center;
+    margin: 22px 6px;
 
     @media (max-width: $tablet) {
         width: 170px;
+        margin: 12px 6px;
     }
 
     @media (max-width: 830px) {
@@ -47,10 +49,12 @@
 
     @media (max-width: $mobile-l) {
         width: 160px;
+        margin: 24px 6px;
     }
 
     @media (max-width: $mobile-m) {
         width: 140px;
+        margin: 8px 6px;
     }
 
     @media (max-width: $mobile-s) {

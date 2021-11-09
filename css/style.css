@@ -3550,35 +3550,12 @@ h2 {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-column-gap: 44px;
-     -moz-column-gap: 44px;
-          column-gap: 44px;
-  row-gap: 12px;
   margin: 50px auto 0;
 }
 
 @media (max-width: 900px) {
   .situation__list {
-    -webkit-column-gap: 24px;
-       -moz-column-gap: 24px;
-            column-gap: 24px;
     margin: 30px auto 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .situation__list {
-    -webkit-column-gap: 48px;
-       -moz-column-gap: 48px;
-            column-gap: 48px;
-  }
-}
-
-@media (max-width: 440px) {
-  .situation__list {
-    -webkit-column-gap: 16px;
-       -moz-column-gap: 16px;
-            column-gap: 16px;
   }
 }
 
@@ -3586,11 +3563,13 @@ h2 {
   width: 200px;
   -ms-grid-column-align: center;
       justify-self: center;
+  margin: 22px 6px;
 }
 
 @media (max-width: 900px) {
   .situation__item {
     width: 170px;
+    margin: 12px 6px;
   }
 }
 
@@ -3603,12 +3582,14 @@ h2 {
 @media (max-width: 600px) {
   .situation__item {
     width: 160px;
+    margin: 24px 6px;
   }
 }
 
 @media (max-width: 440px) {
   .situation__item {
     width: 140px;
+    margin: 8px 6px;
   }
 }
 
