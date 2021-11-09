@@ -5,10 +5,6 @@
     }
 }
 
-.about__wrap {
-    
-}
-
 .about__header {
     max-width: 850px;
     width: 100%;
@@ -156,7 +152,7 @@
         }
 
         @media (max-width: 700px) {
-            margin-top: 40px;
+            margin: 40px 0 0 0;
         }
 
         @media (max-width: $mobile-l) {
@@ -187,7 +183,6 @@
 .about__section-content {
     display: flex;
     flex-direction: column;
-    // margin: 54px 0 0 50px;
 }
 
 .about__section-content-item {

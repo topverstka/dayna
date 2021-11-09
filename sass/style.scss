@@ -1,7 +1,7 @@
 @import '_fonts';
 
 // USER VARIABLES SECTION
-$ffMain: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$ffMain: Calibri, Carlito, Caldea, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 $ffHeader: 'Oswald', sans-serif;
 $ffSerif: serif;
 
@@ -9,17 +9,11 @@ $minHover: 768px; // если хочешь убрать hover на телефо�
 $tr: .4s; // плавность
 
 // Переменные разрешения экрана (адаптив)
-// $laptop-l: 1440;
 $laptop: 1200px;
 $tablet: 900px;
 $mobile-l: 600px;
 $mobile-m: 440px;
 $mobile-s: 350px;
-// $laptop: 1024px;
-// $tablet: 768px;
-// $mobile-l: 425px;
-// $mobile-m: 375px;
-// $mobile-s: 320px;
 
 // Переменные цвета
 :root {
@@ -79,10 +73,6 @@ body {
 
     &._lock {
         overflow: hidden;
-    }
-
-    @media (max-width: $tablet) {
-        // font-size: 14px;
     }
 }
 

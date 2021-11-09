@@ -29,14 +29,6 @@
     }
 }
 
-.reviews__wrap {
-
-}
-
-.reviews__body {
-
-}
-
 .reviews__slider {
     position: relative;
 }
@@ -112,12 +104,8 @@
     }
 
     @media (max-width: $tablet) {
-        font-size: 20px;
+        font-size: 19px;
     }
-
-    // @media (max-width: $mobile-l) {
-    //     text-align: left;
-    // }
 
     &::before {
         content: '';
@@ -223,14 +211,6 @@
 .reviews__arrow {
     width: 15px;
     height: 22px;
-}
-
-.reviews__arrow-prev {
-
-}
-
-.reviews__arrow-next {
-
 }
 
 // Стили слайдера

@@ -13,17 +13,17 @@
     @media (max-width: $mobile-m) {
         margin: 0 0 36px 0;
     }
-}
 
-.after__wrap {
+    & .container {
 
+        @media (max-width: $mobile-l) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }
 
 // Шапка
-.after__header {
-
-}
-
 .after__title {
     max-width: 850px;
     width: 100%;
@@ -32,6 +32,7 @@
 
     @media (max-width: $mobile-m) {
         font-size: 24px;
+        margin: 0 16px;
     }
 }
 
@@ -49,37 +50,33 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 85px;
-    row-gap: 24px;
-
-    @media (max-width: $tablet) {
-        column-gap: 40px;
-    }
-
-    @media (max-width: $mobile-l) {
-        column-gap: 30px;
-        row-gap: 15px;
-    }
-
-    @media (max-width: $mobile-m) {
-        column-gap: 25px;
-    }
 }
 
 .after__item {
     max-width: 280px;
     width: 100%;
+    margin: 12px 42px;
 
     @media (max-width: $tablet) {
         max-width: 220px;
+        margin: 12px 20px;
     }
 
     @media (max-width: $mobile-l) {
         max-width: 200px;
+        margin: 8px 15px;
+    }
+
+    @media (max-width: $mobile-m) {
+        margin: 8px 12px;
     }
 
     @media (max-width: 480px) {
         max-width: 150px;
+    }
+
+    @media (max-width: 360px) {
+        margin: 8px;
     }
 }
 
@@ -113,6 +110,7 @@
     }
 
     @media (max-width: $mobile-l) {
+        padding: 0 16px;
         margin: 30px auto 0;
     }
 
