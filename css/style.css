@@ -5758,7 +5758,7 @@ h2 {
 @media (max-width: 440px) {
   .after__title {
     font-size: 24px;
-    margin: 0 16px;
+    padding: 0 16px;
   }
 }
 
