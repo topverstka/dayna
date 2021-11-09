@@ -62,7 +62,6 @@ function accordion() {
 
 		// При клике по кнопке "Узнать подробнее" активируется аккордеон
 		accBtn.addEventListener('click', () => {
-			// scrollToStartAcc(acc)
 			removeAll(accElems, '_show')
 			acc.classList.add('_show')
 
@@ -79,13 +78,21 @@ function accordion() {
 			else {
 				accBody.style.maxHeight = 0
 			}
+            setTimeout(() => {
+                scrollToStartAcc(acc)
+            }, 400)
 		})
 	}
 
 	// Скролл до начала аккордеона
 	function scrollToStartAcc(acc) {
 		const distanceTop = getCoords(acc).top
-		window.scrollTo(0, distanceTop)
+		// window.scrollTo(0, distanceTop)
+        window.scroll({
+            top: distanceTop,
+            left: 0,
+            behavior: 'smooth'
+        })
 	}
 }
 
@@ -255,4 +262,22 @@ function closeWhenClickingOnBg(itemArray, itemParent, classShow = '_show') {
 
         }
     })
+}
+
+scrollToAnchor(200)
+function scrollToAnchor(distanceTop = 0) {
+    const linkElems = document.querySelectorAll('[href^="#"]')
+    for (let i = 0; i < linkElems.length; i++) {
+        const link = linkElems[i];
+        link.addEventListener('click', (e) => {
+            e.preventDefault()
+            let href = link.getAttribute('href')
+            let anchor = document.querySelector(href)
+            window.scroll({
+                top: anchor.getBoundingClientRect().top + pageYOffset - distanceTop,
+                left: 0,
+                behavior: 'smooth'
+            })
+        })
+    }
 }
