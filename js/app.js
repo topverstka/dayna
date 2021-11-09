@@ -46,13 +46,13 @@ function changeDate() {
 accordion()
 function accordion() {
 	const accElems = d.querySelectorAll('.acc')
-	let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+	let isSafari = /safari/.test(navigator.userAgent.toLowerCase());
 
 	for (let i = 0; i < accElems.length; i++) {
 		const acc = accElems[i];
 		const accBtn = acc.querySelector('.acc__btn')
 		const accBody = acc.querySelector('.acc__body')
-        const accBodyHeight = isSafari ? accBody.scrollHeight + 42 : accBody.scrollHeight
+        const accBodyHeight = isSafari ? accBody.scrollHeight + 40 : accBody.scrollHeight
 		
 		// После загрузки DOM аккордеоны с классом _show активируются
 		if (acc.classList.contains('_show')) {
