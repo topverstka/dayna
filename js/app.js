@@ -62,7 +62,7 @@ function accordion() {
 
 		// При клике по кнопке "Узнать подробнее" активируется аккордеон
 		accBtn.addEventListener('click', () => {
-			scrollToStartAcc(acc)
+			// scrollToStartAcc(acc)
 			removeAll(accElems, '_show')
 			acc.classList.add('_show')
 
