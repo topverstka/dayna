@@ -77,7 +77,7 @@
     align-items: center;
 
     @media (max-width: $tablet) {
-        max-width: 150px;
+        max-width: 125px;
     }
 
     @media (max-width: $mobile-l) {
@@ -197,14 +197,18 @@
     }
 
     @media (max-width: 800px) {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
 .goals__text {
     width: fit-content;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 700;
     color: $second;
     margin: 48px auto 0 auto;
+
+    @media (max-width: $mobile-l) {
+        font-size: 17px;
+    }
 }

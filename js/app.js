@@ -46,15 +46,18 @@ function changeDate() {
 accordion()
 function accordion() {
 	const accElems = d.querySelectorAll('.acc')
-	
+	let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+
 	for (let i = 0; i < accElems.length; i++) {
 		const acc = accElems[i];
 		const accBtn = acc.querySelector('.acc__btn')
 		const accBody = acc.querySelector('.acc__body')
+        const accBodyHeight = isSafari ? accBody.scrollHeight + 42 : accBody.scrollHeight
 		
 		// После загрузки DOM аккордеоны с классом _show активируются
 		if (acc.classList.contains('_show')) {
-			accBody.style.maxHeight = accBody.scrollHeight + 'px';
+            console.log(accBodyHeight)
+            accBody.style.maxHeight = accBodyHeight + 'px'
 		}
 
 		// При клике по кнопке "Узнать подробнее" активируется аккордеон
@@ -71,10 +74,10 @@ function accordion() {
 			}
 
 			if (acc.classList.contains('_show')) {
-				accBody.style.maxHeight = accBody.scrollHeight + 'px';
+				accBody.style.maxHeight = accBodyHeight + 'px'
 			}
 			else {
-				accBody.style.maxHeight = 0;
+				accBody.style.maxHeight = 0
 			}
 		})
 	}
