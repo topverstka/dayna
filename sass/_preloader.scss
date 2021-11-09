@@ -7,6 +7,7 @@
     height: 100%;
     background: #ffd0ba;
     animation: preloader 1.6s ease-in-out 2s forwards;
+    pointer-events: none;
 }
 
 .preloader__body {
@@ -98,6 +99,7 @@
 
 @keyframes preloader {
     0% {
+        pointer-events: all;
         transform: translate(0,0);
     }
     99% {
