@@ -87,7 +87,6 @@ function accordion() {
 	// Скролл до начала аккордеона
 	function scrollToStartAcc(acc) {
 		const distanceTop = getCoords(acc).top
-		// window.scrollTo(0, distanceTop)
         window.scroll({
             top: distanceTop,
             left: 0,
