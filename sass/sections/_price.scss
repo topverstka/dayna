@@ -164,7 +164,7 @@
     margin: 26px 0 60px 0;
 
     @media (max-width: $laptop) {
-        margin: 100px 0 36px 0;
+        margin: 26px 0 36px 0;
     }
 
     @media (max-width: $mobile-m) {
@@ -271,12 +271,12 @@
     align-items: center;
     margin: 0 0 30px 0;
 
-    @media (max-width: $laptop) {
-        position: absolute;
-        top: 28px;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
+    // @media (max-width: $laptop) {
+    //     position: absolute;
+    //     top: 28px; 
+    //     left: 50%;
+    //     transform: translate(-50%, 0);
+    // }
 }
 
 .price-item__old-price {
@@ -309,7 +309,7 @@
 .price-item__more {
     display: none;
 
-    @media (max-width: $laptop) {
+    @media (max-width: $laptop) { 
         display: flex;
         align-items: center;
         margin: 30px 0;

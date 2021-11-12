@@ -3814,6 +3814,7 @@ h2 {
 .parameters__title {
   max-width: 660px;
   font-size: 48px;
+  margin: 20px 0 0 0;
 }
 
 @media (max-width: 900px) {
@@ -5350,7 +5351,7 @@ h2 {
 
 @media (max-width: 1200px) {
   .price-item__body {
-    margin: 100px 0 36px 0;
+    margin: 26px 0 36px 0;
   }
 }
 
@@ -5499,17 +5500,6 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 0 30px 0;
-}
-
-@media (max-width: 1200px) {
-  .price-item__prices {
-    position: absolute;
-    top: 28px;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
 }
 
 .price-item__old-price {
