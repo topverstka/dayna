@@ -64,6 +64,20 @@
     }
 }
 
+.btn_outline {
+    border: 2px solid $accent;
+    color: $accent;
+
+    @media (min-width: $minHover) {
+    
+        &:hover {
+            color: #fff; 
+            background-color: $accent-hover;
+            border: 2px solid $accent-hover;
+        }
+    }
+}
+
 .btn_center {
     display: block;
     width: fit-content;

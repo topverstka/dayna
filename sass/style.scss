@@ -21,6 +21,7 @@ $mobile-s: 350px;
     --second: #58626F;
     --accent: #FF755D;
     --accent-hover: #ff917e;
+    // --accent-hover: #FF756B;
     --outline: #C0C0C0;
     --bg-page: #FEF1EB;
     --bg-section: #E0CCC7; 
@@ -94,6 +95,7 @@ body {
 
 // Библиотеки
 @import 'libs/_animate';
+@import 'libs/_intlTelInput';
 
 // Компоненты
 @import 'components/_buttons';
@@ -119,3 +121,7 @@ body {
 @import 'sections/_faq';
 @import 'sections/_result';
 @import 'sections/_footer';
+@import 'sections/_modal-bizon';
+
+// Страницы
+@import 'pages/_thank';

@@ -1,3 +1,4 @@
+<?php require 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="RU">
 <head>
@@ -46,9 +47,9 @@
 			<header class="header">
 				<div class="container">
 					<div class="header__body">
-						<a href="mailto:info@einberga.com" class="header__email">
+						<a href="mailto:<?php echo $email; ?>" class="header__email">
 							<div class="header__email-icon"><img src="./img/icons/email.png" alt="email"></div>
-							<span class="header__email-text">info@einberga.com</span>
+							<span class="header__email-text"><?php echo $email; ?></span>
 						</a>
 						<p class="header__descr">Трансформационный онлайн-курс для женщин</p>
 						<div class="section-line header__sesction-line wow showLine"></div>
@@ -60,7 +61,44 @@
 					<h1 class="main__title wow slideInUp">Я РАСКРЫВАЮСЬ СЧАСТЬЮ!</h1>
 					<p class="main__descr wow slideInUp" data-wow-delay="100ms">Не откладывай свою жизнь на потом, а своё счастье на следующий раз</p>
 					<a href="#price" class="btn btn_full btn_center main__btn wow slideInUp" data-wow-delay="200ms">Хочу счастья</a>
-					<span class="main__label wow slideInUp" data-wow-delay="300ms">с <span></span> октября</span>
+					<?php 
+						$mounth_titles = array(
+							"01" => "января",
+							"02" => "февраля",
+							"03" => "марта",
+							"04" => "апреля",
+							"05" => "мая",
+							"06" => "июня",
+							"07" => "июля",
+							"08" => "августа",
+							"09" => "сентября",
+							"10" => "октября",
+							"11" => "ноября",
+							"12" => "декабря"
+						);
+
+						if ($course_date == '') {
+							$day = intval(date("d")) + 2;
+							$mounth_num = date("m");
+							$mounth = $mounth_titles[date("m")];
+							$course_date = intval(date("d")) + 2 .'.'.date("m");
+						}
+						else {
+							$str = explode('.', $course_date);
+							$day = $str[0];
+							$mounth_num = $str[1];
+							$mounth = $mounth_titles[$str[1]];
+
+							$date = new DateTime(date('Y').'-'.$str[1].'-'.$str[0]);
+							$now = new DateTime();
+
+							if($date < $now) {
+								$day = date('d');
+								$mounth = $mounth_titles[date("m")];
+							}
+						}
+					?>
+					<span class="main__label wow slideInUp" data-wow-delay="300ms">с <span><?php echo $day; ?></span> <?php echo $mounth; ?></span>
 				</div>
 			</div>
 			<div class="main__dec">
@@ -243,16 +281,16 @@
 						<form action="#" method="POST" class="video__form">
 							<div class="video__input-list">
 								<div class="input wow slideInLeft">
-									<input id="user-name" type="text" name="name" placeholder="Укажи имя и фамилию" required>
+									<input type="text" name="user_name" placeholder="Укажи имя и фамилию" required>
 								</div>
 								<div class="input wow fadeIn">
-									<input id="user-phone" type="tel" name="phone" placeholder="Введи номер телефона" required>
+									<input type="tel" name="user_phone" placeholder="Введи номер телефона" required>
 								</div>
 								<div class="input wow slideInRight">
-									<input id="user-email" type="email" name="email" placeholder="Введи e-mail" required>
+									<input type="email" name="user_email" placeholder="Введи e-mail" required>
 								</div>
 							</div>
-							<button class="btn btn_full btn_center video__btn wow bounceIn">Записаться на вебинар</button>
+							<input class="btn btn_full btn_center video__btn wow bounceIn" type="submit" value="Записаться на вебинар">
 							<span class="video__error"></span>
 						</form>
 					</div>
@@ -414,7 +452,7 @@
 												<span class="price-item__old-price">90000 рублей / 1090 евро</span>
 												<span class="price-item__current-price">67000 рублей / 812 евро</span>
 											</div>
-											<a href="https://einberg.online/sales/shop/dealPay/id/145443982/hash/6f10" target="_blank" class="btn btn_full btn_center price-item__footer-btn wow fadeIn">Хочу!</a>
+											<button class="btn btn_full btn_center price-item__footer-btn wow fadeIn" data-modal-open="course_started">Хочу!</button>
 										</div>
 									</div>
 									<button class="acc__btn price-item__more">
@@ -449,7 +487,7 @@
 												<span class="price-item__old-price">120000 рублей / 1450 евро</span>
 												<span class="price-item__current-price">75000 рублей / 908 евро</span>
 											</div>
-											<a href="https://einberg.online/sales/shop/dealPay/id/145444297/hash/8aa6" target="_blank" class="btn btn_full btn_center price-item__footer-btn wow bounceIn">Занимаю место!</a>
+											<button class="btn btn_full btn_center price-item__footer-btn wow bounceIn" data-modal-open="course_average">Занимаю место!</button>
 										</div>
 									</div>
 									<button class="acc__btn price-item__more">
@@ -488,7 +526,7 @@
 												<span class="price-item__old-price">300000 рублей / 3634 евро</span>
 												<span class="price-item__current-price">200000 рублей / 2420 евро</span>
 											</div>
-											<a href="https://einberg.online/sales/shop/dealPay/id/145444549/hash/91d7" target="_blank" class="btn btn_full btn_center price-item__footer-btn wow fadeIn">Дайна, хочу!</a>
+											<button class="btn btn_full btn_center price-item__footer-btn wow fadeIn" data-modal-open="course_advanced">Дайна, хочу!</button>
 										</div>
 									</div>
 									<button class="acc__btn price-item__more">
@@ -507,7 +545,7 @@
 				<div class="attention__wrap">
 					<div class="attention__header wow fadeIn">
 						<h2 class="attention__header-title">Внимание!!!</h2>
-						<p class="attention__header-text">Курс стартует <strong class="text-accent">28 октября</strong>, поэтому записаться на курс желательно уже сейчас, чтобы всем хватило мест.</p>
+						<p class="attention__header-text">Курс стартует <strong class="text-accent"><?php echo $day.' '.$mounth; ?></strong>, поэтому записаться на курс желательно уже сейчас, чтобы всем хватило мест.</p>
 					</div>
 					<div class="attention__body">
 						<div class="attention__content wow slideInLeft">
@@ -533,7 +571,7 @@
 							</div>
 							<div class="after__item wow fadeIn">
 								<div class="after__item-img"><img src="./img/after/2.png" alt=""></div>
-								<h3 class="after__item-title">в течение 24 часов Ты на почту получишь подарок (если успеешь до 18.10.)</h3>
+								<h3 class="after__item-title">в течение 24 часов Ты на почту получишь подарок (если успеешь до <?php echo $course_date; ?>)</h3>
 							</div>
 							<div class="after__item wow fadeIn">
 								<div class="after__item-img"><img src="./img/after/3.png" alt=""></div>
@@ -541,14 +579,14 @@
 							</div>
 							<div class="after__item wow fadeIn">
 								<div class="after__item-img"><img src="./img/after/4.png" alt=""></div>
-								<h3 class="after__item-title">25.10. я присоединяю Тебя в секретный женский чат</h3>
+								<h3 class="after__item-title"><?php echo $secret_women_chat == '' ? ($day + 1).'.'.$mounth_num : $secret_women_chat; ?> я присоединяю Тебя в секретный женский чат</h3>
 							</div>
 							<div class="after__item wow fadeIn">
 								<div class="after__item-img"><img src="./img/after/5.png" alt=""></div>
-								<h3 class="after__item-title">31 октября Ты получишь первое видео и начнёшь онлайн-путешествие к своему сердцу!</h3>
+								<h3 class="after__item-title"><?php echo $first_video == '' ? ($day + 2).' '.$mounth : $first_video; ?> Ты получишь первое видео и начнёшь онлайн-путешествие к своему сердцу!</h3>
 							</div>
 						</div>
-						<p class="after__text wow fadeIn">Само собой, что если что-то не будет получаться - зарегистрироваться, оплатить, не получишь какое-то письмо или возникнут дополнительные вопросы, то напиши мне на <a href="mailto:info@einberga.com">info@einberga.com</a> и я Тебе быстро помогу.</p>
+						<p class="after__text wow fadeIn">Само собой, что если что-то не будет получаться - зарегистрироваться, оплатить, не получишь какое-то письмо или возникнут дополнительные вопросы, то напиши мне на <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a> и я Тебе быстро помогу.</p>
 						<div class="after__please">
 							<h3 class="after__please-title wow slideInUp">Пожалуйста!</h3>
 							<p class="after__please-text wow slideInUp" data-wow-delay="200ms">Не откладывай свою жизнь на потом, а своё счастье на следующий раз. Просто возьми и сделай это сегодня!</p>
@@ -592,7 +630,7 @@
 					<div class="diss__body">
 						<ul class="diss__item-list">
 							<li class="diss__item wow slideInLeft">Ты посетила первый урок курса.</li>
-							<li class="diss__item wow slideInLeft" data-wow-delay="100ms">Ты объяснила по электронной почте <a href="mailto:info@einberga.com">info@einberga.com</a>, почему курс не оправдал Твоих ожиданий.</li>
+							<li class="diss__item wow slideInLeft" data-wow-delay="100ms">Ты объяснила по электронной почте <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>, почему курс не оправдал Твоих ожиданий.</li>
 							<li class="diss__item wow slideInLeft" data-wow-delay="200ms">Ты отправила нам это письмо не позднее 27 сентября.</li>
 						</ul>
 					</div>
@@ -642,7 +680,7 @@
 									<h3 class="faq-acc__header-title">Как я могу оплатить Курс?</h3>
 								</div>
 								<div class="faq-acc__body">
-									<p class="faq-acc__text">Для оплаты необходимо нажать на кнопку «ДАЙНА, УЖЕ ИДУ!».<br>Далее откроется страница с выбором способа оплаты (карта VISA/Mastercard, Yandex, Webmoney и прочее). Выбери удобный для Тебя способ и оплачивай в 2 клика. Если возникнут сложности - обязательно напиши в службу поддержки <a href="mailto:info@einberga.com">info@einberga.com</a>.</p>
+									<p class="faq-acc__text">Для оплаты необходимо нажать на кнопку «ДАЙНА, УЖЕ ИДУ!».<br>Далее откроется страница с выбором способа оплаты (карта VISA/Mastercard, Yandex, Webmoney и прочее). Выбери удобный для Тебя способ и оплачивай в 2 клика. Если возникнут сложности - обязательно напиши в службу поддержки <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>.</p>
 								</div>
 							</div>
 							<div class="faq-acc__item wow slideInUp">
@@ -706,15 +744,15 @@
 						<a href="https://drive.google.com/file/d/1PBo5aW68wAFtt9fEXsphqtNsHJPpEy53/view" target="_blank" class="footer__policy-link">Noteikumi un Privātuma politika</a>
 					</div>
 					<div class="footer__contacts">
-						<a href="mailto:info@einberga.com" class="footer__email">
+						<a href="mailto:<?php echo $email; ?>" class="footer__email">
 							<span class="footer__email-icon"><img src="./img/icons/email.png" alt="Email"></span>
-							<span class="footer__email-text">info@einberga.com</span>
+							<span class="footer__email-text"><?php echo $email; ?></span>
 						</a>
 						<div class="footer__social">
 							<span class="footer__social-text">Присоединяйтесь</span>
 							<div class="footer__social-list">
-								<a href="https://www.instagram.com/dainaexpert/?hl=en" class="footer__social-link"><img src="./img/icons/instagram.png" alt="instagram"></a>
-								<a href="https://www.facebook.com/DainaExpert/" class="footer__social-link"><img src="./img/icons/facebook.png" alt="facebook"></a>
+								<a href="<?php echo $instagram; ?>" class="footer__social-link"><img src="./img/icons/instagram.png" alt="instagram"></a>
+								<a href="<?php echo $facebook; ?>" class="footer__social-link"><img src="./img/icons/facebook.png" alt="facebook"></a>
 							</div>
 						</div>
 					</div>
@@ -724,7 +762,7 @@
 	</div>
 
 	<!-- Модальные окна -->
-	<div class="modal" id="privacy-policy">
+	<!-- <div class="modal" id="privacy-policy">
 		<div class="modal__body">
 			<div class="modal__content">
 				<h2>Политика конфиденциальности</h2>
@@ -737,20 +775,105 @@
 				</div>
 			</div>
 		</div>
+	</div> -->
+
+<!-- <div class="modal modal-reg" id="registration">
+	<div class="modal__body modal-reg__body">
+		<div class="modal__content modal-reg__content">
+			<h2 class="modal-reg__title">Запуск</h2>
+			<form class="modal-reg__form">
+				<div class="input modal-reg__input">
+					<input type="text" name="user_name" placeholder="Введите ваше Имя" required>
+				</div>
+				<div class="input modal-reg__input">
+					<input type="phone" name="user_phone" placeholder="Введите ваш номер телефона" required>
+				</div>
+				<div class="input modal-reg__input">
+					<input type="email" name="user_email" placeholder="Введите ваш e-mail" required>
+				</div>
+				<div class="modal-reg__agree">
+					<input type="checkbox" class="modal-reg__agree-checkbox" id="modal-reg__agree-checkbox" required>
+					<label class="modal-reg__agree-label" for="modal-reg__agree-checkbox">Соглашаюсь с условиями публичной оферты и политикой конфиденциальности</label>
+				</div>
+				<input class="btn btn_full modal-reg__submit" type="submit" value="Перейти к оплате">
+				<span class="video__error"></span>
+			</form>
+		</div>
+	</div>
+</div> -->
+
+	<div class="modal" id="course_started">
+		<div class="modal__body">
+			<div class="modal__content">
+				<script id="29a57f03eee125e35462cd79ff2a1883d958d2d9" src="https://einberg.online/pl/lite/widget/script?id=511890"></script>
+            <button class="modal__close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="2.11" transform="matrix(0.707107 0.707107 -0.719783 0.694199 3.75928 1.92889)" fill="#0C2A4E"/>
+                    <rect width="20" height="2.11" transform="matrix(0.707107 -0.707107 0.719783 0.694199 2.24072 16.071)" fill="#0C2A4E"/>
+                </svg>
+            </button>
+			</div>
+		</div>
 	</div>
 
+	<div class="modal" id="course_average">
+		<div class="modal__body">
+			<div class="modal__content">
+			<script id="884486972c5abf3bce5910c2412902bb275b46ff" src="https://einberg.online/pl/lite/widget/script?id=511898"></script>
+            <button class="modal__close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="2.11" transform="matrix(0.707107 0.707107 -0.719783 0.694199 3.75928 1.92889)" fill="#0C2A4E"/>
+                    <rect width="20" height="2.11" transform="matrix(0.707107 -0.707107 0.719783 0.694199 2.24072 16.071)" fill="#0C2A4E"/>
+                </svg>
+            </button>
+			</div>
+		</div>
+	</div>
 
+	<div class="modal" id="course_advanced">
+		<div class="modal__body">
+			<div class="modal__content">
+			<script id="6f193cb18de82adc83b8bae62fb1679ac0947e51" src="https://einberg.online/pl/lite/widget/script?id=511901"></script>
+            <button class="modal__close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="2.11" transform="matrix(0.707107 0.707107 -0.719783 0.694199 3.75928 1.92889)" fill="#0C2A4E"/>
+                    <rect width="20" height="2.11" transform="matrix(0.707107 -0.707107 0.719783 0.694199 2.24072 16.071)" fill="#0C2A4E"/>
+                </svg>
+            </button>
+			</div>
+		</div>
+	</div>
+<!-- 
+	<div class="modal" id="modal-1">
+    <div class="modal__body">
+        <div class="modal__content">
+            <h2>Модальное окно</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+            <button class="modal__close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="2.11" transform="matrix(0.707107 0.707107 -0.719783 0.694199 3.75928 1.92889)" fill="#0C2A4E"/>
+                    <rect width="20" height="2.11" transform="matrix(0.707107 -0.707107 0.719783 0.694199 2.24072 16.071)" fill="#0C2A4E"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div> -->
 
 	<script src="js/wow.min.js"></script>
 	<script>
 		new WOW().init();
 	</script>
-	
-	<script src="./js/swiper-bundle.min.js" defer></script>
-	<script src="./js/app.js" defer></script>
 
-	<script type="text/javascript" src="//static.bizon365.ru/form/anyform.min.js"></script>
-<script type="text/javascript">
+	<script src="./js/swiper-bundle.min.js"></script>
+	<script src="./js/intlTelInput.min.js"></script>
+	<script src="./js/app.js"></script>
+
+	<script src="./js/anyform.js"></script>
+
+	<script type="text/javascript" src="//static.bizon365.ru/form/form.min.js"></script>
+
+	
+<script>
 (function() {
   //
   //   Этот скрипт позволяет подключить регистрацию на вебинар в Бизоне
@@ -775,8 +898,8 @@
       // Селектор формы или форм (их может быть несколько)
       // Это не обязательно именно тег form, "формой" может быть любой div
       // Относительно формы ищутся все поля, перечисленные в разделе form_fields
-      form: '.video__form',
-      submitButton: '.video__btn',
+      form: 'form',
+      submitButton: 'input[type=submit]',
 
       // Селектор для вывода сообщений об ошибке. Не привязан к форме.
       // Если селектор не указан, сообщение об ошибке будет выведено через alert
@@ -784,7 +907,7 @@
 
       // селекторы для вывода даты и времени ближайшего сеанса. Не привязано к форме.
       // Если селекторы не заданы, то дата и время никуда не выводятся.
-      closestDate: '.attention__header-text .text-accent',
+      closestDate: '',
       closestTime: '',
     },
 
@@ -793,10 +916,10 @@
     form_fields: {
       // [Обязательный параметр]
       // 
-      username: 'input[name="name"]',
-      email: 'input[name="email"]',
+      username: 'input[name="user_name"]',
+      email: 'input[name="user_email"]',
       // телефон. 
-      phone: 'input[name="phone"]',
+      phone: 'input[name="user_phone"]',
       
 
       // селектор кнопки, если она находится за пределами формы. Или если форма сделана без тега form.
@@ -820,20 +943,21 @@
 
     // Адрес для переадресации посетителя в случае успешной регистрации.
     // Если не задано или задано пустое значение, то переадресация не выполняется.
-    redirectUrl: 'https://belka.work/success',
+    redirectUrl: './thank.php',
 
     // Текст сообщения в случае успешной регистрации.
     // Если не задано, то используется текст по умолчанию.
     successMessage: '',
 
-    // Разрешать ли штатный обработчик "submit" у формы. 
+    // Разрешать ли штатный обработчик "submit" у формы.
     // Если ваша форма параллельно делает post-запрос, то нужно задать true.
-    allowFormAction: true,
+    allowFormAction: false,
   });
 })
 // Раскомментируйте следующую строку, чтобы форма инициализировалась при загрузке страницы
  ();
 
 </script>
+
 </body>
 </html>

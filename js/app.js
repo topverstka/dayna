@@ -33,7 +33,7 @@ function bodyLock(con) {
 }
 
 // Изменение даты на 2 дня вперед
-changeDate()
+// changeDate()
 function changeDate() {
 	const elem = document.querySelector('.main__label span')
 	const date = new Date()
@@ -56,7 +56,6 @@ function accordion() {
 		
 		// После загрузки DOM аккордеоны с классом _show активируются
 		if (acc.classList.contains('_show')) {
-            console.log(accBodyHeight)
             accBody.style.maxHeight = accBodyHeight + 'px'
 		}
 
@@ -96,7 +95,7 @@ function accordion() {
 }
 
 // Слайдер в разделах отзывах на экранах меньше 480px
-if (window.innerWidth <= 440) {
+if (window.innerWidth <= 440 && document.querySelector('.reviews__slider')) {
 	const reviewsSlider = new Swiper('.reviews__slider', {	
 		slidesPerView: 1,
 		spaceBetween: 0,
@@ -132,11 +131,13 @@ function closeModalWhenClickingOnCross() {
         const modal = modalElems[i];
         const closeThisModal = modal.querySelector('.modal__close')
 
-        closeThisModal.addEventListener('click', () => {
-            modal.classList.remove('_show')
-            bodyLock(false)
-            resetHash()
-        })
+        if (closeThisModal) {
+            closeThisModal.addEventListener('click', () => {
+                modal.classList.remove('_show')
+                bodyLock(false)
+                resetHash()
+            })
+        }
     }
 }
 
@@ -246,3 +247,101 @@ function scrollToAnchor(distanceTop = 0) {
         })
     }
 }
+
+// Маска с кодами стран для инпута телефона
+if (document.querySelector("[name=user_phone]")) { maskTelInput() }
+function maskTelInput() {
+    let input = document.querySelector("[name=user_phone]");
+    window.intlTelInput(input, {
+        "separateDialCode": true,
+        "preferredCountries": ["ru", "by", "kz", "ua"]
+    //   utilsScript: "node_modules/intl-tel-input/build/js/utils.js?21",
+    });
+}
+
+// addStyleBizonIframe()
+// function addStyleBizonIframe() {
+//     let interval = setInterval(() => {
+//         const iframeElems = document.querySelectorAll('.modal iframe')
+//         if (iframeElems.length != 0) {
+//             clearInterval(interval)
+//         }
+//         console.log(iframeElems)
+//         for (let iframe of iframeElems) {
+//             let iframeContent = iframe.contentDocument;
+//             iframeContent.body.innerHTML = iframeContent.body.innerHTML + '<style>.gc-user-guest{background-color: #d92909}</style>';
+//             console.log(iframeContent)
+//         }
+//     }, 100)
+// }
+
+// Выбор страны для номера
+// function phoneCountry() {
+//     const selectHeaderElems = document.querySelectorAll('.select__header');
+
+//     for (let i = 0; i < selectHeaderElems.length; i++) {
+//         const selectHeader = selectHeaderElems[i];
+
+//         selectHeader.parentElement.addEventListener('click', e => {
+//         const selectBody = selectHeader.nextElementSibling,
+//                 phoneCountryText = selectHeader.parentElement.nextElementSibling,
+//                 selectItemElems = selectBody.querySelectorAll('.select-item');
+
+//         for (let i = 0; i < selectItemElems.length; i++) {
+//             const selectItem = selectItemElems[i];
+//             selectItem.addEventListener('click', () => {
+//             const selectItemImg = selectItem.innerHTML,
+//                     selectHeaderIcon = selectHeader.querySelector('.select__header-icon');
+
+//             selectHeaderIcon.innerHTML = selectItemImg;
+//             phoneCountryText.innerText = selectItem.dataset.phoneCountry;
+//             })
+//         }
+
+//         selectHeader.classList.toggle('_show');
+//         closeWhenClickingOnBg(selectHeader);
+//         })
+//     }
+// }
+// phoneCountry();
+
+// Маска номера телефона
+function maskPhone(selector, masked = '(___) ___-__-__') {
+    const elems = document.querySelectorAll(selector);
+
+    function mask(event) {
+        const keyCode = event.keyCode;
+        const template = masked,
+            def = template.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, "");
+        let i = 0,
+            newValue = template.replace(/[_\d]/g, function (a) {
+                return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+            });
+        i = newValue.indexOf("_");
+        if (i !== -1) {
+            newValue = newValue.slice(0, i);
+        }
+        let reg = template.substr(0, this.value.length).replace(/_+/g,
+            function (a) {
+                return "\\d{1," + a.length + "}";
+            }).replace(/[+()]/g, "\\$&");
+        reg = new RegExp("^" + reg + "$");
+        if (!reg.test(this.value) || this.value.length < 0 || keyCode > 47 && keyCode < 58) {
+            this.value = newValue;
+        }
+        if (event.type === "blur" && this.value.length < 0) {
+            this.value = "";
+        }
+
+    }
+
+    for (const elem of elems) {
+        elem.addEventListener("input", mask);
+        elem.addEventListener("focus", mask);
+        elem.addEventListener("blur", mask);
+    }
+    
+}
+
+maskPhone("[name=user_phone]");
