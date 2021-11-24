@@ -1,0 +1,10 @@
+.section-line {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(270deg, rgba(171, 134, 106, 0) 0%, #B08C6F 10%, #EAD0AB 45%, #EAD0AB 55%, #AB866A 90%, rgba(171, 134, 106, 0) 100%);
+    border-radius: 20%;
+
+    @media (max-width: $tablet) {
+        width: 140%;
+    }
+}

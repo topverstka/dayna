@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./css/style.css"> 
 </head> 
 <body>
-	<div class="preloader">
+	<!-- <div class="preloader">
 		<div class="preloader__body">
 			<div class="preloader__icon">
 				<svg width="299" height="60" viewBox="0 0 299 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +40,7 @@
 				</svg>						
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="wrapper">
 
 		<main class="main">
@@ -275,7 +275,18 @@
 					</div>
 					<div class="video__body wow fadeIn">
 						<div class="video__block">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/iFtCLjT8e_4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<div class="video__iframe video__link" data-youtube-src="https://www.youtube.com/embed/iFtCLjT8e_4?rel=0&showinfo=0&autoplay=1">
+								<picture>
+									<source srcset="https://i.ytimg.com/vi_webp/iFtCLjT8e_4/maxresdefault.webp" type="image/webp">
+									<img src="https://i.ytimg.com/vi/iFtCLjT8e_4/maxresdefault.jpg" alt="7 лайфхаков для белки в колесе" class="video__iframe-img">
+								</picture>
+								<button class="video__iframe-btn">
+									<span class="video__iframe-btn-icon">
+										<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg>
+									</span>
+								</button>
+								<iframe width="560" height="315" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
 						</div>
 
 						<form action="#" method="POST" class="video__form">
@@ -762,46 +773,6 @@
 	</div>
 
 	<!-- Модальные окна -->
-	<!-- <div class="modal" id="privacy-policy">
-		<div class="modal__body">
-			<div class="modal__content">
-				<h2>Политика конфиденциальности</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitiaLorem ipsum dolor sit amet consectetur adipisicing elit. Vero deserunt id perspiciatis vitae illo ea sequi nihil, sunt, libero ducimus atque mollitia.</p>
-				<div class="modal__close">
-					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="20" height="2.11" transform="matrix(0.707107 0.707107 -0.719783 0.694199 3.75928 1.92889)" fill="#0C2A4E"/>
-						<rect width="20" height="2.11" transform="matrix(0.707107 -0.707107 0.719783 0.694199 2.24072 16.071)" fill="#0C2A4E"/>
-					</svg>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-<!-- <div class="modal modal-reg" id="registration">
-	<div class="modal__body modal-reg__body">
-		<div class="modal__content modal-reg__content">
-			<h2 class="modal-reg__title">Запуск</h2>
-			<form class="modal-reg__form">
-				<div class="input modal-reg__input">
-					<input type="text" name="user_name" placeholder="Введите ваше Имя" required>
-				</div>
-				<div class="input modal-reg__input">
-					<input type="phone" name="user_phone" placeholder="Введите ваш номер телефона" required>
-				</div>
-				<div class="input modal-reg__input">
-					<input type="email" name="user_email" placeholder="Введите ваш e-mail" required>
-				</div>
-				<div class="modal-reg__agree">
-					<input type="checkbox" class="modal-reg__agree-checkbox" id="modal-reg__agree-checkbox" required>
-					<label class="modal-reg__agree-label" for="modal-reg__agree-checkbox">Соглашаюсь с условиями публичной оферты и политикой конфиденциальности</label>
-				</div>
-				<input class="btn btn_full modal-reg__submit" type="submit" value="Перейти к оплате">
-				<span class="video__error"></span>
-			</form>
-		</div>
-	</div>
-</div> -->
-
 	<div class="modal" id="course_started">
 		<div class="modal__body">
 			<div class="modal__content">
@@ -843,21 +814,6 @@
 			</div>
 		</div>
 	</div>
-<!-- 
-	<div class="modal" id="modal-1">
-    <div class="modal__body">
-        <div class="modal__content">
-            <h2>Модальное окно</h2>
-            <p>Lorem ipsum dolor sit amet</p>
-            <button class="modal__close">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="20" height="2.11" transform="matrix(0.707107 0.707107 -0.719783 0.694199 3.75928 1.92889)" fill="#0C2A4E"/>
-                    <rect width="20" height="2.11" transform="matrix(0.707107 -0.707107 0.719783 0.694199 2.24072 16.071)" fill="#0C2A4E"/>
-                </svg>
-            </button>
-        </div>
-    </div>
-</div> -->
 
 	<script src="js/wow.min.js"></script>
 	<script>
@@ -870,7 +826,7 @@
 
 	<script src="./js/anyform.js"></script>
 
-	<script type="text/javascript" src="//static.bizon365.ru/form/form.min.js"></script>
+	<script src="//static.bizon365.ru/form/form.min.js"></script>
 
 	
 <script>

@@ -1,0 +1,240 @@
+$wwa: 1200px;
+
+.thank {
+
+    &::before {
+        content: '';
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../img/thank-insta/bg.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.thank__body {
+    max-width: 560px;
+    width: 100%;
+    padding: 60px 0 90px;
+    margin: 0 auto;
+
+    @media (max-width: 800px) {
+        padding: 40px 0;
+    }
+}
+
+.thank__title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #000;
+    text-transform: none;
+
+    @media (max-width: 800px) {
+        font-size: 30px;
+    }
+}
+
+.thank__list {
+    padding: 0 0 0 24px;
+    margin: 40px 0 0 0;
+
+    @media (max-width: 800px) {
+        margin: 20px 0 0 0;
+    }
+}
+
+.thank__item {
+    font-family: $ffHeader;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.55;
+    color: #000;
+    list-style-position: outside;
+
+    @media (max-width: $wwa) {
+        font-size: 22px;
+    }
+
+    @media (max-width: 800px) {
+        font-size: 20px;
+    }
+
+    &::marker {
+        font-weight: 400;
+    }
+}
+
+.thank__button {
+    width: fit-content;
+    display: flex;
+    font-size: 20px;
+    margin: 60px auto 0;
+
+    @media (max-width: 800px) {
+        margin: 40px auto 0;
+    }
+}
+
+// Раздел с видео
+.thank-video__block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    & iframe {
+        max-width: 960px;
+        width: 100%;
+        height: 540px;
+        
+        @media (max-width: $wwa) {
+            max-width: 780px;
+            height: 440px;
+        }
+    
+        @media (max-width: 700px) {
+            height: 360px;
+        }
+    
+        @media (max-width: 575px) {
+            height: 260px;
+        }
+    
+        @media (max-width: 520px) {
+            height: 220px;
+        }
+    
+        @media (max-width: 450px) {
+            height: 200px;
+        }
+    
+        @media (max-width: 400px) {
+            height: 180px;
+        }
+    
+        @media (max-width: 365px) {
+            height: 170px;
+        }
+    
+        @media (max-width: 335px) {
+            height: 160px;
+        }
+    }
+}
+
+// Приглашение в инстаграм
+.thank-insta {
+    position: relative;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    margin: 60px 0 0 0;
+    background-color: #E4CDC1;
+    
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: url(../img/thank-insta/women.webp) no-repeat;
+    //     background-size: contain;
+    //     background-position: left center;
+
+    //     @media (max-width: 800px) {
+    //         display: none;
+    //     }
+    // }
+
+    @media (max-width: $wwa) {
+        background-size: 110%;
+    }
+
+    @media (max-width: 800px) {
+        height: auto;
+        padding: 0 0 40px 0;
+
+        & .container {
+            padding: 0;
+        }
+    }
+}
+
+.thank-insta__body {
+    width: 100%;
+    display: flex;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.thank-insta__left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 800px) {
+        width: 100%;
+        // height: 350px;
+    }
+
+    @media (max-width: 400px) {
+        // height: 280px;
+    }
+
+    & img {
+        width: 120%;
+        height: 120%;
+
+        @media (max-width: 800px) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.thank-insta__content {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 800px) {
+        width: 100%;
+        padding: 0 16px;
+    }
+}
+
+.thank-insta__text {
+    max-width: 395px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.55;
+    color: #000;
+
+    @media (max-width: 400px) {
+        font-size: 18px;
+    }
+}
+
+.thank-insta__button {
+    font-size: 20px;
+    margin: 60px 0 0 0;
+
+    @media (max-width: $wwa) {
+        margin: 40px 0 0 0;
+    }
+}

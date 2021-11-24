@@ -1,0 +1,232 @@
+.reviews {
+
+    @media (max-width: $mobile-l) {
+        padding-bottom: 0;
+    }
+
+    @media (max-width: $mobile-m) {
+        position: relative;
+        
+        &.section {
+            margin: 0;
+            padding: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -100px;
+            width: 300px;
+            height: 270px;
+            transform: translate(0, -50%);
+            background: url(../img/reviews/blob.png) no-repeat;
+            background-size: contain;
+            background-position: center;
+            opacity: .4;
+            z-index: -1;
+        }
+    }
+}
+
+.reviews__slider {
+    position: relative;
+}
+
+.reviews__item-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+    }
+
+    @media (max-width: $mobile-m) {
+        flex-direction: row;
+        justify-content: normal;
+    }
+}
+
+.reviews__item {
+    position: relative;
+    width: 440px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $mobile-m) {
+        height: auto;
+    }
+}
+
+.reviews__item-small {
+    height: 330px;
+
+    @media (max-width: $mobile-m) {
+        height: auto;
+    }
+
+    &.reviews__item_first {
+        
+        & .reviews__item-text {
+            padding: 45px 40px 45px 50px;
+        }
+
+        & .reviews__item-img-flower {
+            bottom: -40px;
+            left: -240px;
+        }
+    }
+
+    &.reviews__item_second {
+        
+        & .reviews__item-text {
+            padding: 45px 42px 45px 75px;
+        }
+
+        & .reviews__item-img-flower {
+            bottom: -40px;
+            left: 310px;
+        }
+    }
+}
+
+.reviews__item-text {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    text-align: left;
+
+    @media (max-width: 1000px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: $tablet) {
+        font-size: 19px;
+    }
+
+    &::before {
+        content: '';
+        display: inline-block;
+        min-width: 15px;
+        width: 15px;
+        height: 12px;
+        background: url(../img/icons/quote-start.png) no-repeat;
+        margin: 0 6px 0 -21px;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        min-width: 15px;
+        width: 15px;
+        height: 12px;
+        background: url(../img/icons/quote-start.png) no-repeat;
+        margin: 0 0 0 6px;
+    }
+}
+
+.reviews__item_first {
+    
+    & .reviews__item-text {
+        padding: 45px 21px 45px 40px;
+
+        @media (max-width: $mobile-l) {
+            padding: 0 20px 20px;
+        }
+    }
+
+    & .reviews__item-img-flower {
+        width: 373px;
+        bottom: -50px;
+        left: -230px;
+    }
+}
+
+.reviews__item_second {
+    margin: 0 0 0 50px;
+
+    @media (max-width: $tablet) {
+        margin: 0;
+    }
+    
+    & .reviews__item-text {
+        padding: 45px 22px 45px 55px;
+
+        @media (max-width: $mobile-l) {
+            padding: 0 20px 20px;
+        }
+    }
+
+    & .reviews__item-img-flower {
+        width: 382px;
+        bottom: -50px;
+        left: 300px;
+    }
+}
+
+.reviews__item-img-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    @media (max-width: $mobile-m) {
+        display: none;
+    }
+}
+
+.reviews__item-img-flower {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+
+    @media (max-width: $mobile-m) {
+        display: none;
+    }
+}
+
+// Стрелки слайдера
+.reviews__arrows {
+    display: none;
+
+    @media (max-width: $mobile-m) {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.reviews__arrow {
+    width: 15px;
+    height: 22px;
+}
+
+// Стили слайдера
+.swiper-slide.reviews__item {
+
+    @media (max-width: $mobile-m) {
+        
+        & .reviews__item-text {
+            padding: 0 22px 0 55px;
+        }
+
+        &.swiper-slide-active {
+            
+            & .reviews__item-text {
+                padding: 0 22px 0 25px;
+            }
+        }
+    }
+}

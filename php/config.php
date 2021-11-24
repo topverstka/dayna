@@ -18,7 +18,7 @@ $first_video = '24 ноября';
 // Контакты
 $email = 'info@einberga.com';
 $instagram = 'https://www.instagram.com/dainaexpert/?hl=en';
-$facebook = 'https://www.facebook.com/DainaExpert/';
+$facebook = '';
 
 
 

@@ -1,0 +1,127 @@
+@import '_fonts';
+
+// USER VARIABLES SECTION
+$ffMain: Calibri, Carlito, Caldea, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+$ffHeader: 'Oswald', sans-serif;
+$ffSerif: serif;
+
+$minHover: 768px; // если хочешь убрать hover на телефонах, укажи - 768px
+$tr: .4s; // плавность
+
+// Переменные разрешения экрана (адаптив)
+$laptop: 1200px;
+$tablet: 900px;
+$mobile-l: 600px;
+$mobile-m: 440px;
+$mobile-s: 350px;
+
+// Переменные цвета
+:root {
+    --main: #6C7785;
+    --second: #58626F;
+    --accent: #FF755D;
+    --accent-hover: #ff917e;
+    // --accent-hover: #FF756B;
+    --outline: #C0C0C0;
+    --bg-page: #FEF1EB;
+    --bg-section: #E0CCC7; 
+}
+
+$main: var(--main);
+$second: var(--second);
+$accent: var(--accent);
+$accent-hover: var(--accent-hover);
+$outline: var(--outline);
+$bg-page: var(--bg-page);
+$bg-section: var(--bg-section);
+
+
+@import '_reset';
+
+
+// GENERAL DOCUMENT STYLES
+
+::selection {
+    background: #fed9cd;
+}
+::-moz-selection {
+    background: #ffb7b7;
+}
+
+body::-webkit-scrollbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: .6em;
+    height: 100%;
+}
+
+body::-webkit-scrollbar-track {
+    background: #FEF1EB;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #CAC1BC;
+}
+
+
+body {
+    color: $main;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    background: $bg-page;
+
+    &._lock {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.text-accent {
+    color: $accent;
+}
+
+@import '_preloader';
+@import '_grid';
+
+// Библиотеки
+@import 'libs/_animate';
+@import 'libs/_intlTelInput';
+
+// Компоненты
+@import 'components/_buttons';
+@import 'components/_forms';
+@import 'components/_swiper';
+@import 'components/_titles';
+@import 'components/_section-line';
+@import 'components/_modal';
+
+// Секции
+@import 'sections/_main';
+@import 'sections/_situation';
+@import 'sections/_banner';
+@import 'sections/_parameters';
+@import 'sections/_reviews';
+@import 'sections/_video';
+@import 'sections/_about';
+@import 'sections/_goals';
+@import 'sections/_price';
+@import 'sections/_attention';
+@import 'sections/_after';
+@import 'sections/_diss';
+@import 'sections/_faq';
+@import 'sections/_result';
+@import 'sections/_footer';
+@import 'sections/_modal-bizon';
+
+// Страницы
+@import 'pages/_thank';

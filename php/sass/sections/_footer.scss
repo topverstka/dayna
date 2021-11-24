@@ -1,0 +1,144 @@
+.footer {
+    position: relative;
+    z-index: 1;
+    background: $bg-section;
+    padding: 36px 0;
+
+    @media (max-width: $laptop) {
+        padding: 28px 0;
+    }
+
+    @media (max-width: $tablet) {
+        position: relative;
+        padding-top: 70px;
+    }
+
+    @media (max-width: $mobile-l) {
+        padding-top: 36px;
+    }
+}
+
+.footer__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $mobile-l) {
+        flex-direction: column;
+
+    }
+}
+
+.footer__content {
+
+}
+
+.footer__content-text {
+    font-size: 18px;
+}
+
+.footer__content-slogan {
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 13px 0 0 0;
+
+    @media (max-width: $laptop) {
+        margin: 4px 0 0 0;
+    }
+}
+
+.footer__policy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+
+    @media (max-width: $tablet) {
+        position: absolute;
+        top: 28px;
+        left: 50%;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        transform: translate(-50%, 0);
+    }
+
+    @media (max-width: $mobile-l) {
+        position: initial;
+        flex-direction: column;
+        transform: none;
+        margin: 38px 0;
+    }
+}
+
+.footer__policy-link {
+    font-size: 18px;
+    text-align: center;
+    text-align: left;
+
+    @media (max-width: $tablet) {
+        
+        &:last-child {
+
+            &::before {
+                content: '/';
+                font-size: inherit;
+                margin: 0 4px;
+
+                @media (max-width: $mobile-l) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer__email {
+    display: flex;
+    align-items: center;
+}
+
+.footer__email-icon {
+    display: inline-block;
+    min-width: 29px;
+    width: 29px;
+}
+
+.footer__email-text {
+    font-size: 18px;
+    margin: 0 0 0 12px;
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+
+.footer__social-text {
+    font-size: 18px;
+}
+
+
+.footer__social-list {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 18px;
+}
+
+.footer__social-link {
+    min-width: 26px;
+    width: 26px;
+    height: 26px;
+
+    &:not(:last-child) {
+        margin: 0 17px 0 0;
+    }
+}

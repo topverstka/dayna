@@ -1,0 +1,251 @@
+// Шапка
+.header {
+    padding: 26px 0 0 0;
+
+    @media (max-width: $mobile-m) {
+        padding: 16px 0 0 0;
+    }
+}
+
+.header__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__email {
+    display: flex;
+    align-items: center;
+}
+
+.header__email-icon {
+    width: 24px;
+    height: 17px;
+}
+
+.header__email-text {
+    font-size: 18px;
+    margin: 0 0 0 6px;
+
+    @media (max-width: $mobile-m) {
+        font-size: 16px;
+    }
+}
+
+.header__descr {
+    font-size: 18px;
+    text-align: center;
+    margin: 4px 0 0 0;
+
+    @media (max-width: $mobile-m) {
+        font-size: 16px;
+    }
+
+    @media (max-width: $mobile-s) {
+        max-width: 250px;
+    }
+}
+
+.header__sesction-line {
+    max-width: 428px;
+    width: 100%;
+    margin: 20px 0 0 0;
+
+    @media (max-width: $mobile-m) {
+        max-width: none;
+        width: 140%;
+        margin: 12px 0 0 0;
+    }
+}
+
+// Главный экран
+.main {
+    position: relative;
+    width: 100%;
+    height: 570px;
+    background: url(../img/main/bg-image.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    background-attachment: fixed;
+
+    @media (max-width: $laptop) {
+        height: 560px;
+    }
+
+    @media (max-width: $mobile-l) {
+        height: 650px;
+    }
+}
+
+.main__body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 90px 0 0 0;
+    z-index: 1;
+
+    @media (max-width: $tablet) {
+        margin: 32px 0 0 0;
+    }
+}
+
+.main__title {
+    font-size: 60px;
+
+    @media (max-width: $tablet) {
+        max-width: 360px;
+    }
+
+    @media (max-width: $mobile-m) {
+        font-size: 50px;
+    }
+
+    @media (max-width: $mobile-s) {
+        font-size: 45px;
+    }
+}
+
+.main__descr {
+    max-width: 460px;
+    font-size: 26px;
+    text-align: center;
+    margin: 12px 0 0 0;
+
+    @media (max-width: $tablet) {
+        margin: 6px 0 0 0;
+    }
+
+    @media (max-width: $mobile-l) {
+        max-width: 420px;
+        font-size: 24px;
+    }
+
+    @media (max-width: $mobile-m) {
+        max-width: 280px;
+        font-size: 22px;
+        margin: 20px 0 0 0;
+    }
+}
+
+.main__btn {
+    margin: 33px 0 0 0;
+
+    @media (max-width: $mobile-l) {
+        margin: 24px 0 0 0
+    }
+}
+
+.main__label {
+    font-size: 20px;
+    text-align: center;
+    margin: 26px 0 0 0;
+    
+    @media (max-width: $tablet) {
+        margin: 12px 0 0 0;
+    }
+    
+    @media (max-width: $mobile-l) {
+        margin: 47px 0 0 0;
+    }
+
+    @media (max-width: $mobile-m) {
+        margin: 20px 0 0 0;
+    }
+}
+
+// Декорации на главном экране
+.main__dec {
+    pointer-events: none;
+}
+
+.main__dec-flower-left {
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    width: 566px;
+    transform: translate(calc(-50% - 330px), 0);
+
+    @media (max-width: $mobile-l) {
+        bottom: -227px;
+        width: 530px;
+        transform: translate(calc(-50% - 220px), 0);
+    }
+
+    @media (max-width: $mobile-m) {
+        bottom: -50px;
+        width: 570px;
+        transform: translate(calc(-50% - -50px), 0);
+    }
+}
+
+.main__dec-flower-right {
+    position: absolute;
+    top: -250px;
+    right: 50%;
+    width: 735px;
+    height: 480px;
+    transform: translate(calc(50% + 590px), 0);
+
+    @media (max-width: $laptop) {
+        width: 715px;
+        transform: translate(calc(50% + 560px), 0);
+    }
+
+    @media (max-width: $tablet) {
+        top: -280px;
+        transform: translate(calc(50% + 290px), 0);
+    }
+
+    @media (max-width: $mobile-l) {
+        display: none;
+    }
+
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @media (max-width: $tablet) {
+            
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+}
+
+.main__dec-dayna {
+    position: absolute;
+    bottom: -50px;
+    right: 50%;
+    width: 750px;
+    transform: translate(calc(50% + 370px), 0);
+
+    @media (max-width: $laptop) {
+        bottom: -50px;
+        width: 730px;
+    }
+
+    @media (max-width: $tablet) {
+        bottom: -70px;
+        width: 660px;
+        transform: translate(calc(50% + 270px), 0);
+    }
+
+    @media (max-width: $mobile-l) {
+        bottom: -30px;
+        width: 500px;
+        transform: translate(calc(50% + 180px), 0);
+    }
+
+    @media (max-width: $mobile-m) {
+        bottom: -20px;
+        width: 360px;
+        transform: translate(calc(50% + 80px), 0);
+    }
+}
