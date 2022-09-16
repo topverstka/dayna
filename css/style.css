@@ -3891,7 +3891,7 @@ h2 {
 }
 @media (min-width: 1100px) {
   .header__email {
-    margin-left: -10px;
+    margin-left: -14px;
   }
 }
 
@@ -3902,7 +3902,7 @@ h2 {
 
 .header__email-text {
   font-size: 18px;
-  margin: 0 0 0 6px;
+  margin: 0 0 0 8px;
 }
 @media (max-width: 440px) {
   .header__email-text {
@@ -3913,7 +3913,7 @@ h2 {
 .header__descr {
   font-size: 18px;
   text-align: center;
-  margin: 1px 0 0 -7px;
+  margin: 1px 0 0 -15px;
 }
 @media (max-width: 440px) {
   .header__descr {
@@ -3969,6 +3969,11 @@ h2 {
   align-items: center;
   margin: 95px 0 0 0;
   z-index: 1;
+}
+@media (min-width: 1101px) {
+  .main__body {
+    margin-left: -3px;
+  }
 }
 @media (max-width: 900px) {
   .main__body {
@@ -4029,7 +4034,7 @@ h2 {
     padding-left: 48px;
     padding-right: 48px;
     margin-left: 6px;
-    padding-top: 16px;
+    padding-top: 15px;
     margin-top: 31px;
   }
 }
@@ -4080,7 +4085,7 @@ h2 {
 @media (min-width: 1100px) {
   .main__dec-flower-left {
     bottom: -196px;
-    left: 50.5%;
+    left: 50.2%;
     width: 566px;
   }
 }
@@ -4109,7 +4114,7 @@ h2 {
 }
 @media (min-width: 1100px) {
   .main__dec-flower-right {
-    right: 54.4%;
+    right: 54%;
     width: 775px;
   }
 }

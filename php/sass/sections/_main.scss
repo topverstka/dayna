@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   @media (min-width: 1100px) {
-    margin-left: -10px;
+    margin-left: -14px;
   }
 }
 
@@ -29,7 +29,7 @@
 
 .header__email-text {
   font-size: 18px;
-  margin: 0 0 0 6px;
+  margin: 0 0 0 8px;
 
   @media (max-width: $mobile-m) {
     font-size: 16px;
@@ -39,7 +39,7 @@
 .header__descr {
   font-size: 18px;
   text-align: center;
-  margin: 1px 0 0 -7px;
+  margin: 1px 0 0 -15px;
 
   @media (max-width: $mobile-m) {
     font-size: 16px;
@@ -92,6 +92,9 @@
   margin: 95px 0 0 0;
   z-index: 1;
 
+  @media (min-width: 1101px) {
+    margin-left: -3px;
+  }
   @media (max-width: $tablet) {
     margin: 32px 0 0 0;
   }
@@ -143,7 +146,7 @@
     padding-left: 48px;
     padding-right: 48px;
     margin-left: 6px;
-    padding-top: 16px;
+    padding-top: 15px;
     margin-top: 31px;
   }
 
@@ -188,7 +191,7 @@
 
   @media (min-width: 1100px) {
     bottom: -196px;
-    left: 50.5%;
+    left: 50.2%;
     width: 566px;
   }
   @media (max-width: $mobile-l) {
@@ -213,7 +216,7 @@
   transform: translate(calc(50% + 590px), 0);
 
   @media (min-width: 1100px) {
-    right: 54.4%;
+    right: 54%;
     width: 775px;
   }
   @media (max-width: $laptop) {
