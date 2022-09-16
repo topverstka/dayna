@@ -1,12 +1,13 @@
-@import '_fonts';
+@import "_fonts";
 
 // USER VARIABLES SECTION
-$ffMain: Calibri, Carlito, Caldea, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-$ffHeader: 'Oswald', sans-serif;
+$ffMain: Calibri, Carlito, Caldea, Candara, Segoe, "Segoe UI", Optima, Arial,
+  sans-serif;
+$ffHeader: "Oswald", sans-serif;
 $ffSerif: serif;
 
 $minHover: 768px; // если хочешь убрать hover на телефонах, укажи - 768px
-$tr: .4s; // плавность
+$tr: 0.4s; // плавность
 
 // Переменные разрешения экрана (адаптив)
 $laptop: 1200px;
@@ -17,14 +18,14 @@ $mobile-s: 350px;
 
 // Переменные цвета
 :root {
-    --main: #6C7785;
-    --second: #58626F;
-    --accent: #FF755D;
-    --accent-hover: #ff917e;
-    // --accent-hover: #FF756B;
-    --outline: #C0C0C0;
-    --bg-page: #FEF1EB;
-    --bg-section: #E0CCC7; 
+  --main: #6c7785;
+  --second: #58626f;
+  --accent: #ff755d;
+  --accent-hover: #ff917e;
+  // --accent-hover: #FF756B;
+  --outline: #c0c0c0;
+  --bg-page: #fef1eb;
+  --bg-section: #e0ccc7;
 }
 
 $main: var(--main);
@@ -35,93 +36,90 @@ $outline: var(--outline);
 $bg-page: var(--bg-page);
 $bg-section: var(--bg-section);
 
-
-@import '_reset';
-
+@import "_reset";
 
 // GENERAL DOCUMENT STYLES
 
 ::selection {
-    background: #fed9cd;
+  background: #fed9cd;
 }
 ::-moz-selection {
-    background: #ffb7b7;
+  background: #ffb7b7;
 }
 
 body::-webkit-scrollbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: .6em;
-    height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0.6em;
+  height: 100%;
 }
 
 body::-webkit-scrollbar-track {
-    background: #FEF1EB;
+  background: #fef1eb;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #CAC1BC;
+  background-color: #cac1bc;
 }
 
-
 body {
-    color: $main;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.2;
-    background: $bg-page;
+  color: $main;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  background: $bg-page;
 
-    &._lock {
-        overflow: hidden;
-    }
+  &._lock {
+    overflow: hidden;
+  }
 }
 
 .wrapper {
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
 }
 
 .text-accent {
-    color: $accent;
+  color: $accent;
 }
 
-@import '_preloader';
-@import '_grid';
+@import "_preloader";
+@import "_grid";
 
 // Библиотеки
-@import 'libs/_animate';
-@import 'libs/_intlTelInput';
+@import "libs/ganimate";
+@import "libs/gintlTelInput";
 
 // Компоненты
-@import 'components/_buttons';
-@import 'components/_forms';
-@import 'components/_swiper';
-@import 'components/_titles';
-@import 'components/_section-line';
-@import 'components/_modal';
+@import "components/gbuttons";
+@import "components/gforms";
+@import "components/gswiper";
+@import "components/gtitles";
+@import "components/gsection-line";
+@import "components/gmodal";
 
 // Секции
-@import 'sections/_main';
-@import 'sections/_situation';
-@import 'sections/_banner';
-@import 'sections/_parameters';
-@import 'sections/_reviews';
-@import 'sections/_video';
-@import 'sections/_about';
-@import 'sections/_goals';
-@import 'sections/_price';
-@import 'sections/_attention';
-@import 'sections/_after';
-@import 'sections/_diss';
-@import 'sections/_faq';
-@import 'sections/_result';
-@import 'sections/_footer';
-@import 'sections/_modal-bizon';
+@import "sections/gmain";
+@import "sections/gsituation";
+@import "sections/gbanner";
+@import "sections/gparameters";
+@import "sections/greviews";
+@import "sections/gvideo";
+@import "sections/gabout";
+@import "sections/ggoals";
+@import "sections/gprice";
+@import "sections/gattention";
+@import "sections/gafter";
+@import "sections/gdiss";
+@import "sections/gfaq";
+@import "sections/gresult";
+@import "sections/gfooter";
+@import "sections/gmodal-bizon";
 
 // Страницы
-@import 'pages/_thank';
+@import "pages/thank";
