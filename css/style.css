@@ -4211,11 +4211,6 @@ h2 {
   }
 }
 
-@media (min-width: 1101px) {
-  .situation__title {
-    margin-left: 10px;
-  }
-}
 @media (max-width: 440px) {
   .situation__title {
     font-size: 23px;
@@ -4235,6 +4230,11 @@ h2 {
   flex-wrap: wrap;
   margin: 50px auto 0;
 }
+@media (min-width: 1101px) {
+  .situation__list {
+    margin: 26px 0;
+  }
+}
 @media (max-width: 900px) {
   .situation__list {
     margin: 30px auto 0;
@@ -4244,6 +4244,12 @@ h2 {
   width: 200px;
   justify-self: center;
   margin: 22px 6px;
+}
+@media (min-width: 1101px) {
+  .situation__item {
+    width: 202px;
+    margin: 22px 28px -15px 12px;
+  }
 }
 @media (max-width: 900px) {
   .situation__item {
@@ -4274,6 +4280,18 @@ h2 {
   }
 }
 
+@media (min-width: 1101px) {
+  .situation__item:first-child {
+    margin-left: -10px;
+    margin-right: 40px;
+  }
+  .situation__item:nth-child(3) .situation__item-text {
+    transform: translate(28px, 5px);
+  }
+  .situation__item:nth-child(4) .situation__item-text {
+    transform: translate(35px, 5px);
+  }
+}
 .situation__item-img {
   width: 100%;
   height: auto;
@@ -4283,6 +4301,14 @@ h2 {
   font-size: 20px;
   margin: 13px 0 0 0;
   text-align: center;
+}
+@media (min-width: 1101px) {
+  .situation__item-text {
+    max-width: 99%;
+    padding-right: 20px;
+    margin: 0;
+    transform: translate(20px, 5px);
+  }
 }
 @media (max-width: 900px) {
   .situation__item-text {
